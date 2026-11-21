@@ -1,0 +1,11 @@
+{
+ "briefs": 49,
+ "errors": 1,
+ "format_ok": 1.0,
+ "key_amount_kept": 0.7727272727272727,
+ "n_with_amount": 22,
+ "invented_amount_rate": 0.0,
+ "wants_faithful": 0.8775510204081632,
+ "nothing_invented": 0.9795918367346939,
+ "all_checks_pass": 0.7551020408163265
+}

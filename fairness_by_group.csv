@@ -1,0 +1,5 @@
+group,n,actual_rate,mean_score_3q,mean_score_full,recall_top20_3q,recall_top20_full
+No tag,10238.0,0.201,0.203,0.202,0.418,0.392
+Servicemember,993.0,0.175,0.182,0.177,0.397,0.339
+Older American,595.0,0.222,0.194,0.221,0.477,0.545
+"Older American, Servicemember",174.0,0.172,0.178,0.171,0.367,0.233

@@ -1,0 +1,87 @@
+/Users/vihaansengupta/Library/Application Support/Claude/scratch-workspaces/dec4f235-9bf9-43ce-b8aa-811c9736b6c9/b6b77d5b-eb7c-491c-a39d-345f4a995cd1/scratch-2026-11-21-39e5c0/model.py:190: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  by_group = T.groupby("group").apply(grp).round(3).sort_values("n", ascending=False)
+/Users/vihaansengupta/Library/Application Support/Claude/scratch-workspaces/dec4f235-9bf9-43ce-b8aa-811c9736b6c9/b6b77d5b-eb7c-491c-a39d-345f4a995cd1/scratch-2026-11-21-39e5c0/model.py:192: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  by_state = T[T["state"].isin(top_states)].groupby("state").apply(grp).round(3).sort_values("n", ascending=False)
+/Users/vihaansengupta/Library/Application Support/Claude/scratch-workspaces/dec4f235-9bf9-43ce-b8aa-811c9736b6c9/b6b77d5b-eb7c-491c-a39d-345f4a995cd1/scratch-2026-11-21-39e5c0/model.py:193: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  by_via = T.groupby("via").apply(grp).round(3).sort_values("n", ascending=False)
+1. +sub_product              cv=0.694 test=0.695
+2. +sub_issue                cv=0.704 test=0.709
+3. +issue                    cv=0.706 test=0.711
+4. +product                  cv=0.707 test=0.711
+5. +older_or_servicemember   cv=0.707 test=0.711
+6. +state                    cv=0.705 test=0.711
+full model (all fields + crosses) test AUC=0.712
+
+Fairness by group:
+                                      n  actual_rate  mean_score_3q  mean_score_full  recall_top20_3q  recall_top20_full
+group                                                                                                                  
+No tag                         10238.0        0.201          0.203            0.202            0.418              0.392
+Servicemember                    993.0        0.175          0.182            0.177            0.397              0.339
+Older American                   595.0        0.222          0.194            0.221            0.477              0.545
+Older American, Servicemember    174.0        0.172          0.178            0.171            0.367              0.233
+
+Fairness by state (top 10):
+             n  actual_rate  mean_score_3q  mean_score_full  recall_top20_3q  recall_top20_full
+state                                                                                         
+CA     1419.0        0.202          0.209            0.209            0.429              0.369
+TX     1310.0        0.208          0.203            0.202            0.454              0.414
+FL     1135.0        0.207          0.197            0.201            0.374              0.387
+NY      718.0        0.208          0.217            0.223            0.517              0.557
+GA      664.0        0.179          0.193            0.174            0.303              0.227
+IL      479.0        0.196          0.188            0.184            0.415              0.383
+PA      412.0        0.192          0.210            0.213            0.532              0.532
+NC      396.0        0.182          0.192            0.186            0.403              0.278
+NJ      387.0        0.202          0.209            0.219            0.385              0.436
+OH      345.0        0.188          0.184            0.195            0.323              0.354
+
+Fairness by channel:
+                    n  actual_rate  mean_score_3q  mean_score_full  recall_top20_3q  recall_top20_full
+via                                                                                                  
+Web          11223.0        0.198          0.200            0.200            0.415              0.395
+Phone          399.0        0.273          0.211            0.214            0.523              0.450
+Referral       272.0        0.151          0.195            0.197            0.341              0.220
+Postal mail    106.0        0.170          0.201            0.201            0.500              0.444
+
+Within-company AUC (3 questions):
+                                company   n  rate   auc
+                           Block, Inc. 818 0.031 0.678
+                                MOHELA 443 0.641 0.637
+                  JPMORGAN CHASE & CO. 357 0.168 0.696
+ BANK OF AMERICA, NATIONAL ASSOCIATION 335 0.284 0.542
+     CAPITAL ONE FINANCIAL CORPORATION 332 0.145 0.742
+                 WELLS FARGO & COMPANY 320 0.138 0.596
+              AMERICAN EXPRESS COMPANY 272 0.430 0.551
+                         EQUIFAX, INC. 249 0.450 0.592
+   Experian Information Solutions Inc. 235 0.051 0.411
+                  Paypal Holdings, Inc 231 0.355 0.613
+                        CITIBANK, N.A. 226 0.442 0.607
+TRANSUNION INTERMEDIATE HOLDINGS, INC. 207 0.691 0.634
+median within-company AUC: 0.596 over 17 companies
+{
+ "base_rate": 0.19908333333333333,
+ "top3": [
+  "sub_product",
+  "sub_issue",
+  "issue"
+ ],
+ "auc_top3": 0.7109597020192651,
+ "auc_full": 0.7119453436024257,
+ "auc_fcfs": 0.4712180114534069,
+ "share_of_full_auc_lift": 0.9953495483014266,
+ "top20_top3": {
+  "precision": 0.3929166666666667,
+  "recall": 0.39472582670573464,
+  "flagged_share": 0.2
+ },
+ "top20_full": {
+  "precision": 0.3929166666666667,
+  "recall": 0.39472582670573464,
+  "flagged_share": 0.2
+ },
+ "reached_in_first_20pct": {
+  "Rung (3 questions)": 0.3968187526161574,
+  "Rung (full model)": 0.39472582670573464,
+  "First-come, first-served": 0.14776056927584763,
+  "Random": 0.20594390958560066
+ }
+}

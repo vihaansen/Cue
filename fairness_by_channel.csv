@@ -1,0 +1,5 @@
+via,n,actual_rate,mean_score_3q,mean_score_full,recall_top20_3q,recall_top20_full
+Web,11223.0,0.198,0.2,0.2,0.415,0.395
+Phone,399.0,0.273,0.211,0.214,0.523,0.45
+Referral,272.0,0.151,0.195,0.197,0.341,0.22
+Postal mail,106.0,0.17,0.201,0.201,0.5,0.444

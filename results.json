@@ -1,0 +1,76 @@
+{
+ "rows": 60000,
+ "test_rows": 12000,
+ "base_rate": 0.19908333333333333,
+ "selection_path": [
+  {
+   "k": 1,
+   "added": "sub_product",
+   "cv_auc": 0.6935409042214684,
+   "test_auc": 0.6950554467487656
+  },
+  {
+   "k": 2,
+   "added": "sub_issue",
+   "cv_auc": 0.7041671878091252,
+   "test_auc": 0.7087519275889009
+  },
+  {
+   "k": 3,
+   "added": "issue",
+   "cv_auc": 0.7062196336261327,
+   "test_auc": 0.7109597020192651
+  },
+  {
+   "k": 4,
+   "added": "product",
+   "cv_auc": 0.7067643944038794,
+   "test_auc": 0.7110968495313227
+  },
+  {
+   "k": 5,
+   "added": "older_or_servicemember",
+   "cv_auc": 0.7068637963303813,
+   "test_auc": 0.7110805825907849
+  },
+  {
+   "k": 6,
+   "added": "state",
+   "cv_auc": 0.7053541839317438,
+   "test_auc": 0.7110026014474572
+  }
+ ],
+ "top3": [
+  "sub_product",
+  "sub_issue",
+  "issue"
+ ],
+ "top3_questions": [
+  "What type of account exactly?",
+  "What specifically happened?",
+  "What went wrong?"
+ ],
+ "auc_top3": 0.7109597020192651,
+ "auc_full": 0.7119453436024257,
+ "auc_all_questions": 0.7110026014474572,
+ "auc_fcfs": 0.4712180114534069,
+ "share_of_full_auc_lift": 0.9953495483014266,
+ "top20_top3": {
+  "precision": 0.3929166666666667,
+  "recall": 0.39472582670573464,
+  "flagged_share": 0.2
+ },
+ "top20_full": {
+  "precision": 0.3929166666666667,
+  "recall": 0.39472582670573464,
+  "flagged_share": 0.2
+ },
+ "reached_in_first_20pct": {
+  "Rung (3 questions)": 0.3968187526161574,
+  "Rung (full model)": 0.39472582670573464,
+  "First-come, first-served": 0.14776056927584763,
+  "Random": 0.20594390958560066
+ },
+ "within_company_auc_median": 0.5958498023715415,
+ "within_company_n": 17
+}

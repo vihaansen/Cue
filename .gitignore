@@ -1,0 +1,31 @@
+# secrets
+.env
+.env.*
+!vapi/.env.example
+# local state written by the server
+queue.json
+callers.json
+settings.json
+# environments, builds, tools
+.venv/
+web/node_modules/
+web/dist/
+vapi/bin/
+__pycache__/
+.DS_Store
+# large raw data (CFPB downloads); see README
+data/
+voicemate_handoff.zip
+# local backups and assistant tooling
+.server.py.orig
+.index.v1.html
+index.stable.html
+index.inbox.html
+index.panes.html
+index.home1.html
+web/src.stable/
+web/src.reorg/
+vapi/assistant-backup.json
+.agents/
+.claude/
+skills-lock.json

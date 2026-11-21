@@ -1,0 +1,407 @@
+id,product,format_ok,has_amount,amount_kept,amount_invented,wants_faithful,nothing_invented,judge_note,brief,narrative,error
+7838555,Debt collection,True,True,True,False,False,True,Wants line incorrectly omits requested damages,"Headline: Debt collector abusive practices under FDCPA
+Amount: {$1000.00} per violation
+When: not stated
+Tried: not stated
+Wants: not stated
+Best time: not stated","This debt collector engaged in abusive, deceptive and unfair practices of the FDCPA which prohibits. They furnish this account that we didnt agree upon and I didn't sign an agreement on. A legal contract is signed by two parties and I did not participate in any of it, more so they didnt follow the proper 5 step validation procedure which makes this unfair practices. According to FDCPA Im entitled to {$1000.00} per violation and clearly they violated my rights.",
+2973560,Checking or savings account,True,True,False,False,True,True,Brief accurately reflects complaint details and requested resolution.,"Headline: Complaint about BBVA Compass Bank account closure, NSF charges, and collection referral
+Amount: not stated
+When: near middle of XXXX; oldest statement XX/XX/XXXX to XX/XX/XXXX; certified letter sent on XX/XX/XXXX
+Tried: reported fraudulent activity, cancelled gym membership, requested account closure, sent certified letters to bank and collection agency
+Wants: resolution/help regarding the account and disputed NSF charges
+Best time: not stated","To whom it may concern : I initiated a checking account with BBVA Compass Bank sometime near the middle of XXXX ( oldest statement I could find begins in XX/XX/XXXX to XX/XX/XXXX ) Early on into this relationship, I began having difficulties with the relationship with this institution. I had some fraudulent activity on this account, attempted to inform the bank, essentially my efforts to get resolution/help went without any sort of resolution. There is gymnasium near my home, to which I cancelled my membership in full compliance with the membership agreement. Unfortunately, the gym ( XXXX XXXX in XXXX, CA ) would continue to send in debits against my checking account which at {$32.00} was extremely expensive, inconvenient..you name it. One of the NSF ( after I decided to not continue a relationship with the bank ) was for more money than the amount in dispute, and subsequent to my request to close my account. Additionally when I opened the account, I was informed ( as I knew this was not an institution with extensive branches ) that the "" closest branch was in XXXX, CA ) I went to the address as showing on the website, only to find that the branch was long since closed ... even thought there was a sign posted near the street, as well as on their website. 
+
+My final PHONE call to customer service was the epitome of POOR service, as the person on the phone had little to no interest in helping me, and went as far to say "" that she had other calls to answer '' ... apparently she was in that department with little/ few/ no other customer service agents?? 
+
+Finally after several requests to CLOSE my account, and additional nsf charges accrued since I determine that putting funds in the account would be extremely imprudent/expensive, I received a letter from BBVA Compass that they were closing my account. 
+
+Lastly, they sent this ( alleged money they stated I owed them in NSF charges ) to a collection agency ( XXXX XXXXXXXX XXXX  ) On XX/XX/XXXX, I sent via certified mail ( see attachments ) a letter to the bank as well as the collection agency, both of which were not responded to in any manner. 
+
+( I will address the collection agency matter involved in a separate complaint ) Thank you in advance for your consideration. 
+
+Sincerely, XXXX XXXX XXXX",
+2758022,Vehicle loan or lease,True,True,False,False,True,True,Brief accurately reflects complaint's request and facts.,"Headline: Payment taken by Westlake Financial not credited despite emails and calls
+Amount: not stated
+When: XXXX XXXX, 2017
+Tried: Wrote emails and called; told it would be credited next week, but nothing happened
+Wants: Help to get the missing payment credited and address excessive interest charges
+Best time: not stated","A payment for XXXX that the Westlake Financial commando took from my account on XXXX XXXX, 2017, has not been accredited, I have written emails, without receiving any response to my request to credit the  missing money, I have called and they just tell me that in the next week they will credit it and nothing happens, I do not receive an answer, 6 months ago, and they charge me excessive interest charges, it is not the first time and two more payments have not been accepted, but those were solved, but This payment is pending. My initial credit was {$18000.00}, I paid {$8900.00} in one year and only {$4000.00} has been credited to my account. I think it 's an abuse on the part of this financier. I hope you can help me, thanks",
+3002287,Credit card or prepaid card,True,True,True,False,True,True,All brief details match complaint.,"Headline: Credit card closed after disputed annual fee, reported to credit bureau
+Amount: $180.00  
+When: not stated  
+Tried: Called and complained, was told it was their policy  
+Wants: Annual fee refunded and removal from credit report  
+Best time: not stated","I had a credit card through XXXX XXXX ( Barclays Bank ). Last XX/XX/XXXX there was a credit balance on the account. There was an automatic {$8.00} charge from XXXX and then then XXXX XXXX charged {$180.00} for the "" annual charge ''. I was in the hospital and received no emails, no paper bills etc. Then I get an email in XX/XX/XXXX saying that my account is being closed and I was reported to the credit bureau. When I found out, I paid the full amount but the account was still closed and they kept the annual fee. I called and complained and was basically told that was their policy. That is completely wrong. I would not have authorized a {$180.00} dollar annual fee and asked them to close the account as it is not worth it. They will not take it off my credit report and have {$180.00} for a credit card that I don't even have. That is stealing in my view.",
+6339586,"Payday loan, title loan, or personal loan",True,False,,False,True,True,Brief aligns with complaint's stated requests and facts.,"Headline: Caller challenges Luckmore Finance adverse action citing undisclosed reasons and employment verification process.
+Amount: not stated
+When: not stated
+Tried: Provided employer's number and asked for reasoning on the phone
+Wants: Wants clarification of all adverse action reasons and how employment verification was handled
+Best time: not stated","Luckmore Finance XXXX advised I was discriminated against for not having sufficient credit and my collateral was not new enough on the phone. When I receive an advise letter they mentioned information I was not disclosed of. The letter indicated I was discriminated against because they couldnt verify employment. They did not ask me to send anything to verify employment, I did provide my employers number. If anyone calls my employer to verify employment they are transferred to the appropriate department ( I have transferred others that has called to verify a peers employment with us to that department ). They also mentioned other reasons in which they did not advise me of when in fact I did ask for the reasoning.",
+2973552,Checking or savings account,True,False,,False,False,True,Wants inferred; complaint states no explicit request.,"Headline: Fraudulent demand draft withdrawn from Key Bank account, funds not returned despite police report
+Amount: not stated
+When: withdrawn on XX/XX/XXXX; police report filed on XX/XX/XXXX; no communication as of XX/XX/XXXX
+Tried: calling the fraud hotline but could not outwait the hold time to speak to a person
+Wants: the funds returned and an update on the case
+Best time: not stated","A fraudulent demand draft was authorized without my permission or knowledge and withdrawn from my Key Bank account on XX/XX/XXXX. I noticed and reported this fraud to the bank within the week. On XX/XX/XXXX I filed a police report and supplied this information to the bank. 
+
+To this point, XX/XX/XXXX, I have received no further communication from the bank and the funds have not been returned to me, despite over three weeks having elapsed from the point when I supplied the requested police report. I have tried calling the fraud hotline to get an update on where my case stands but have not been able to outwait the hold time to speak to a person.",
+2757962,"Money transfer, virtual currency, or money service",True,True,False,False,True,True,Brief accurately reflects complaint details and requests.,"Headline: User reports funds disappeared from Coinbase account after months of failed withdrawal attempts and ignored support requests.
+Amount: $300.00
+When: Over the past 2 months; all funds were gone after overnight login issues
+Tried: Emailed ~25 times, called (got recording), 5 failed verification charge attempts, changed password/reauthorized phone, got “too many login attempts”
+Wants: Wants to know if funds are FDIC-backed, why withdrawal failed, and to get remaining funds returned to bank account
+Best time: not stated","Coinbase is a online stock trading application, that evolves around etherum, lite coin, and bitcoin trading. I deposited about {$320.00} Onto the website to buy bitcoin currency. The currency once purchased, I withdrew to put the amount I earned into the companies holding account to deposit into my bank account. The amount on that account was a residual {$300.00}. So I have lost about {$17.00}. The amount I had for bitcoin was {$2.00}, etherum was {$.00}, and litecoin was {$.00}. I have emailed the company around 25 times within the past 2 months to return the valued currency to my bank account after 5 failed attempts of the company sending verification charges to my banks savings and checking accounts. The frustrating part was, each email sent was ignored, and every phone call they received from me, was immiedietely sent back to the prerecording message stating to further get in contact with them, submit a request and send them an email online. With the end of the second month of no reply, my account apparently glitched up and lost all the currency held upon it. I signed into the account, and it told me that it didnt recognize my device. So I changed the password to the account, reauthorized my phone with a sms code sent to my phone via text message, then it wanted me to repeat the process. That I did, and got a message stating to many login attempts. So I fell asleep, woke up the next day, and all the funds were gone. No funds in each currency, or even in the holding account. The main question I have, is if our funds are backed by the FDIC to fully show that our losses arent gone by just being in a holding account. Why is it that I couldnt fully withdraw all my funds from every currency, and withdraw all the funds from my holding account, and deposit into my bank, but some random reason all my currency disapears within 2 hours. Seems fishy that the company is probably holding my funds without me knowing of the location. If more information is needed, I can provide bank statements of the deposits, and that no money being sent to my account. I only use XXXX and bank. But my bank is still not authorized with their company.",
+6673825,Checking or savings account,True,False,,False,True,True,Wants and facts align with complaint.,"Headline: Follow-up on unprocessed account bonus
+
+Amount: not stated
+
+When: three weeks ago; bonus date XX/XX/XXXX
+
+Tried: notified them that the bonus was not processed
+
+Wants: bonus to be processed and punitive damages assessed
+
+Best time: not stated","This is a response to XXXX. Still working on it? They should have taken care of this three weeks ago. Once I notified them that they did not process my bonus on XX/XX/XXXX that they said they would pay me when I opened the account in XXXX, they should have simply processed the bonus. How long should that take? Additional punitive damages should be assessed.",
+2757961,Checking or savings account,True,True,True,False,True,True,Brief accurately reflects complaint facts and requests.,"Headline: Customer seeks answers after both accounts overdrawn by $500,000 and accounts closed without clear explanation
+Amount: $500,000.00
+When: XXXX XXXX (lost purse and contacted bank); statement on XXXX XXXX
+Tried: Contacted bank to cancel account; visited branch and closed savings account; called phone line but no one answers questions
+Wants: Explanation for why both accounts are overdrawn at or more than $500,000.00, why accounts were closed, and help verifying identity online
+Best time: not stated","Something has happened to my account. 
+On XXXX XXXX, I lost my purse, which included my phone and my wallet. I contacted the bank on the to cancel my account. Since I no longer had a job anyways, I decided I would n't be opening another account. I was going to have to make arrangements for my checking account because it was over drawn. I was advised that I would need to visit a branch to do that, and at that time I closed out my savings account as well. I no longer have access to the accounts online and no one will answer any of my questions on the phone as to : A ) Why and how both accounts are right at or more than {$500000.00} overdrawn B ) Why did I get a statement on XXXX XXXX advising me that they were closing out all XXXX of my accounts. 
+
+I do n't know what has happened or how any of this has happened, and now I 'm running into problems verifying my identy online with ANYTHING XXXX XXXX  XXXX, even the XXXX XXXX Please help!",
+2757967,Debt collection,True,True,True,False,True,True,"All facts supported, want matches.","Headline: Debt verification dispute with National Credit Solutions
+Amount: approximately {$6200.00}
+When: not stated (caller was denied residency, sent letters on XXXX XXXX, XXXX and XXXX XXXX, XXXX)
+Tried: sent certified letters to all three credit bureaus and to National Credit Solutions; tracking shows NCS received both letters, but no response
+Wants: the debt item removed from credit report asap
+Best time: not stated","XXXX XXXX, XXXX, I sent a certified letter to all three credit bureaus inquiring about a debt that is listed on my credit report. The amount was approximately {$6200.00} from XXXX for an apartment complex. I was n't aware of it until I was denied residency at an upscale apartment housing complex. I received a response from the bureaus that redirected me to National Credit Solutions. 
+
+On XXXX XXXX, XXXX, I sent a certified letter to NCS. Per the certified XXXX tracking notification, the letter correspondence was received by NCS on XXXX XXXX, XXXX at XXXX. After not receiving a response, I sent a second certified letter on XXXX XXXX, XXXX. According to XXXX tracking, the letter was received on XXXX XXXX, XXXX. To date, I have not received a response. In both letters, I asked for verification of the debt. I am very frustrated that I am not getting a response from this company. I am requesting this item be removed from my credit report asap.",
+2757968,Credit card or prepaid card,True,False,,False,True,True,All brief facts and wants align with complaint.,"Headline: Opened credit card at register, never got card or bill, then faced fees and account closure dispute
+Amount: not stated
+When: not stated
+Tried: Called, reached collections, agreed to pay owed plus interest, made payment, asked to close account, called again, agreed to pay first 3 months of fees, threatened complaint
+Wants: Wants to speak with a supervisor, have fees waived or worked out, and have the account closed
+Best time: not stated",Account # XXXX XXXX I opened the credit card at the cash register. I felt bad for the cashier because the supervisor was telling the cashier he had to sign up more customers for credit cards. So I said I would sign up thinking I would put my purchase and cancel it in 6 months. I might visit XXXX once or twice a year. I completely forgot about it and two months later I checked the paperwork the cashier gave me and it was all black. I believe because of the heat transfer of the paper. I never got a credit card or a bill. Finally three months later I received a bill and no credit card. I called and the call went to their collection department. I told them that I have n't received anything until now. I agreed to pay what I owed and the interest to that point. I told them I wanted to talk with someone from XXXX. I did n't think it was fair that I had 3 months of fees and wanted to talk to someone. I repeatedly asked to talk to someone in charge. I was on the phone and on hold for almost an hour. They said if I made the payment they will have a supervisor call me once the payment cleared. I asked why did n't they think to call if someone never activated the card. They did n't care. I asked would n't that throw up a red flag. I agreed to pay off what I owed plus interest but wanted to talk to a supervisor. They agreed and I made the payment. I asked them to close the account. Months passed I only received one of the bills and no phone calls. I called and tried to talk to them and the account was n't closed. She closed the account and said I was on the hook for everything. They would wave one payment if I made the back payment. I agreed that I will pay the first three months of fees to end the nightmare. Then the rep said I would still have to pay all the other fees. I did n't agree with that. I said that I would file a complaint if they did n't try to work with this situation. They said that nothing could be done. Had I closed months ago they would still charge the high late fee and report every month until I paid everything. You could not do anything because you agreed to have our credit card.,
+3002240,Student loan,True,True,True,False,True,True,Wants not stated; facts all supported.,"Headline: Customer reports paid loan now showing negative balance and accruing interest after final payment in 2018  
+Amount: - ( {$67.00} )  
+When: XX/XX/18 (final payment made)  
+Tried: Notified Navient, requested paid-in-full letter, disputed credit report with XXXX and XXXX  
+Wants: not stated  
+Best time: not stated","-Made final payment on XX/XX/18. 
+-Account is now - ( {$67.00} ) and being charged interest on that. 
+-Notified Navient and received no correction. 
+-Requested letter of stating loan was paid in full ; received nothing. 
+-Disputed credit report through XXXX and XXXX for account accuracy. 
+-Navient marked loan on credit report as "" Closed '' which dropped my score. 
+-Have screenshots of payment history showing a {$0.00} balance. Also have screenshots of account with negative balance and interest being charged on that surplus of funds for a paid off loan.",
+4687441,Debt collection,True,True,True,False,True,True,Brief accurately reflects complaint facts and request.,"Headline: Disputes collection for $360 from unknown creditor  
+Amount: $360.00  
+When: 2021  
+Tried: Contacted the collection agency 4 times in 2021  
+Wants: To get the collection resolved  
+Best time: not stated","I've been trying to get this resolved with this horrible, immoral collection agency ALL YEAR! Their collection tactics are deceitful. They just buy alleged debt for pennies on the dollar to turn a profit. Despicable! They have placed a collection on my credit profiles claiming that I owe {$360.00} to XXXX. Ive never had an account with XXXX. I've always had XXXX XXXX. I have reached out to this company 4 times between XXXX and XXXX of 2021.",
+4871749,Debt collection,True,False,,False,True,True,Brief matches complaint facts; no wants stated.,"Headline: Repeated silent calls and hang-ups  
+Amount: not stated  
+When: XX/XX/21 at multiple times  
+Tried: Accepted calls but no one spoke  
+Wants: not stated  
+Best time: not stated","I have received repeated phone calls multiple times per day from this company. When I accept the call, no one speaks and they end the call. 
+
+This has happened on the following dates at the following times : XX/XX/21 : XXXX XX/XX/21 : XXXX XX/XX/21 : XXXX XX/XX/21 : XXXX XX/XX/21 : XXXX XX/XX/21 : XXXX XX/XX/21 : XXXX I feel harassed at this point with the constant calling and hang ups. According to 15 USC 1692d under Harassment or Abuse, a debt collector may not engage in any conduct the natural consequence of which is to harass, oppress, or abuse any person in connection with the collection of a debt. Subsection 5 specifically states causing a telephone to ring or engaging any person in telephone conversation repeatedly or continuously with intent to annoy, abuse, or harass any person at the called number.",
+6366026,Checking or savings account,True,False,,False,True,True,Brief accurately reflects complaint facts and requested relief.,"Headline: Customer seeking Wells Fargo check copies for documentation, frustrated by unreturned calls
+Amount: not stated
+When: since mid XXXX, with over 6 weeks of executive office follow-up
+Tried: 8+ hours of calls to all levels of banking; spoke to Wells Fargo Executive Office; received only acknowledgment emails
+Wants: check copies / banking records needed for required documentation
+Best time: not stated","Since mid XXXX, I have been trying to get check copies from Wells Fargo. These are needed for required documentation purposes. Despite at least 8+ hours of calls to all levels of banking, Wells Fargo refuses to provide banking records. Wells Fargo sends emails to acknowledge that I have called and they just shine me on. I have spoke to "" Wells Fargo Executive Office '' and despite multiple over more than 6 weeks, Wells Fargo "" executives '' do not return phone calls and do nothing to provide the documents requested.",
+6365792,Mortgage,True,False,,False,False,True,Wants should reflect request for return of belongings,"Headline: Wells Fargo foreclosed without notice and kept belongings including cars, jewelry, diplomas
+Amount: not stated
+When: In 2019, Wells Fargo foreclosed on the property
+Tried: Contacted Wells Fargo, was referred to another party, whose contractor said they cannot return the property
+Wants: not stated
+Best time: not stated","My name is XXXX XXXX XXXX and I had a Mortgage with Wells Fargo for my property located at XXXX XXXX XXXX XXXX. XXXX XXXX XXXX XXXX XXXX. In 2019, Wells Fargo foreclosed on my property without notifying me. Wells Fagor claimed they did notify me, but I never received any documentation before the foreclosed my property and took ownership of this property. 
+
+After Wells Fargo foreclosed on my property, they never returned my personal belongings worth over $ XXXX USD including but not limited to expensive jewelries, expensive clothings, expensive Furnitures & Electronics and my Original Diplomas hung on my wall from XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX 
+
+In addition, my two cars - a XXXX and a XXXX XXXX were also never returned to me. 
+
+I have contacted Wells Fargo regarding the aforementioned personal belongings and and they informed me to contact XXXX XXXX. I followed their advise and contacted XXXX XXXX, who in turn asked one of their contracting company to call me and inform me that there is nothing they can to to return my property.",
+7133873,"Payday loan, title loan, or personal loan",True,True,True,False,True,True,All brief facts match complaint.,"Headline: NetCredit approved $1,900 loan but withdrew funding, demanding bank statements despite paystubs
+Amount: $1900.00
+When: not stated
+Tried: Sent paystub, called to verify identity, contacted NetCredit, resubmitted paystub
+Wants: Loan funded using paystubs only, without providing bank statements or exposing joint account holder info
+Best time: not stated","I applied for loan through NetCredit. And was approved for {$1900.00} I was to send either 2 bank statements or 2 pay stubs I was advised I didnt need both I sent my XXXX paystub which I thought would be enough since it had year to date. 
+I was also advised to call to verify my identity which I complied the loan was to be funded XX/XX/XXXX. But it was withdrawn instead. I contacted NetCredit to see why it was withdrawn They stated that I needed to send either my XX/XX/XXXX paystub OR 2 bank statements to prove my income. XXXX sent the XX/XX/XXXX again I was advised I could use 2 paystubs OR 2 bank statements Not both now they are refusing to fund the loan without bank statements Im concerned about invasion privacy laws due to having a joint account according to NetCredit I can not black the joint account holder information out.. it unfair to be denied for trying to protect the privacy of the joint account holder.",
+6314714,Checking or savings account,True,True,True,False,True,True,"Wants matches complaint, no invented facts.","Headline: Bank of America holding deposit, ignoring scheduled release and placing extended hold
+Amount: {$5500.00}
+When: not stated
+Tried: not stated
+Wants: release of the {$5500.00} required by Regulation CC
+Best time: not stated",Bank of America is holding my deposit. They gave me a scheduled release of funds and have made none available to me on the specified dates. After giving me a scheduled release of funds the bank then put an extended hold on all of my funds not releasing any of the money for 9 days. Legally they according to Regulation CC they are required to release {$5500.00} of the funds to me and hold the remaining until their required date.,
+6447588,Credit card or prepaid card,True,False,,False,True,True,Wants and facts align with complaint exactly.,"Headline: Customer disputing fraud closure of 20-year account, seeks reinstatement and rate relief.
+Amount: not stated
+When: On or about XXXX XXXX, 2022
+Tried: Called Discover multiple times, explained no knowledge of transactions and requested replacement card.
+Wants: Account reopened, interest rate review, and investigation into agent's handling.
+Best time: not stated","On or about XXXX XXXX, 2022, I was told by a Discover Card customer service agent that there was suspected fraudulent activity on my account. This agent had mentioned at least two account transfers involving my card. I insisted that I knew nothing about any such transactions and after much more conversation about this, wed agreed that the card seems to have been breached and we shut it down. After weeks had passed without ever receiving the replacement card and new account number, Id called Discover to let them know I hadnt gotten it yet, and then also about what all had happened that caused the need for the replacement, only to then be told that they dont see anything unusual on my account, and that they cant send me another card because I was in an interest reduction period for six months when it was closed and so I dont qualify for a replacement card! I then explained to this agent and every other agent after that that I did nothing to lose that account. I explained that Ive had this account for coming up on 20 years soon and Ive never missed a payment- EVER! In fact, Ive never missed a payment on anything, at least XXXX accounts across the board during this time and that by closing my account, youre affecting my credit adversely and unfairly! If the Discover agent was lying to be devilish or malicious, then that should be addressed. If he did it because he wasnt trained properly to distinguish between in house transactions and fraud, then that should be addressed as well. Either way, I did nothing to damage my credit in this way, and I dont want my account closed. What I do want, while were on the matter, is a look at my interest rate. My minimum payments have more than doubled and Id like to look at options to make my payments more manageable until I pay the entire balance off soon.",
+6449998,Mortgage,True,False,,False,True,True,Brief accurately reflects complaint's requests and facts.,"Headline: Follow-up on closed complaint regarding Cross Country Mortgage mis-applied funds, no notification, owing thousands and credit damage.
+Amount: not stated
+When: not stated
+Tried: Called representatives who said the mistake would be fixed and money applied to mortgage payments; received no letter or call about owing the mortgage due to mis-applied funds.
+Wants: Cross Country to bring the mortgage current without having to apply for modification; fair and equitable resolution.
+Best time: not stated","This is a follow up on the complaint recently closed regarding Cross Country Mortgage. There is no resolve. Cross Country did not notify me of the funds being mis-applied. The representatives, when I called, reported the "" mistake '' will be fixed and the money applied to the mortgage payments.. I never received a letter/call stating, that I needed to pay the mortgage as a result of mis-applied funds nor did the customer service representative inform me of such. Now I owe thousands of dollars and my credit rating has decrease tremendously, no fault of my own. Cross Country should bring my mortgage current, I should not have the tribulation of applying for modification ( just assuming they will try that explanation ) By law they were to notify me in writing of any changes. The only communication I received was notes to go to financial counseling and threats of foreclosure. "",,, We pride ourselves on customer service '' ... XXXXthey wrote. So please pride yourself in doing what is fair and equitable,",
+6922542,Checking or savings account,True,True,True,False,True,True,All facts and wants match complaint.,"Headline: Customer demands {$1800.00} after never receiving check; faces 121-day wait  
+Amount: {$1800.00}  
+When: Week of XX/XX/XXXX; account closed XX/XX/XXXX; check mailed XX/XX/XXXX  
+Tried: Visited branch; called BOA numerous times; today told must wait 121 days from check mailing  
+Wants: Get funds reissued sooner than 4 months; wants policy changed  
+Best time: not stated","The week of XX/XX/XXXX, we visited the Bank Of America in XXXX XXXX, MD as when I had looked online it was indicating my account was closed. The manager told me she didn't know why the account was closed but we could call XXXX to find out more details. When I called, I was informed that a letter had been mailed to me, which I never received and that a check for the proceeds in my account will be forthcoming. I have yet to receive the check, I have called BOA numerous times, to no avail. Today when I called they indicated I would have to wait 121 days from the date the check was mailed to have the check reissued. I am XXXX XXXX XXXX, that lives paycheck to paycheck, I can not wait over 4 months to get my funds from Bank of America and find this unreasonable. how do these large financial institutions get away with holding my hard earned money for such a long period of time, this is just unethical and their policy should be changed to better protect consumers. The day the account was closed was XX/XX/XXXX, the check was mailed XX/XX/XXXX, and it was for {$1800.00}, I can no longer access my account, nor statements online and quite simply don't understand how this type of unfair service can happen and leave me without a banking relationship, nor cash to facilitate bill payments.",
+6922556,Debt collection,True,False,,False,True,True,"Wants matches complaint, no unsupported facts.","Headline: Consumer disputes Rent Recovery Solutions collection, says alleged debt already satisfied and keeps reappearing on credit report
+Amount: not stated
+When: not stated
+Tried: Says this is the 3rd time they got the item removed from credit report and it keeps reappearing
+Wants: Wants the alleged debt removed from credit report and collection efforts to stop
+Best time: not stated","RENT RECOVERY SOLUTIONS is attempting to collect an alleged obligation on behalf of AT XXXX XXXX. RENT RECOVERY SOLUTIONS on the consumer credit report ( this is the 3rd time ive gotten XXXX removed and it keep reappearing ) per my knowledge there is no legal binding contract bearing my signature to contract with RENT RECOVERY SOLUTIONS. the original creditor XXXX XXXX XXXX XXXX as inaccurately reported an alleged delinquent account bearing my personal information. per the law XXXX was paid in full via the negotiable instrument provided to XXXX XXXX XXXX XXXX during the signing of MY LEASE. per the bankruptcy act of 1933 congress gave the American people the right to pay for all debts by providing an negotiable instrument as I did when at the signing of said negotiable instrument on between the creditor and debtor in the year of XXXX. Per the debt collection laws RENT RECOVERY SOLUTIONS is in violation of the FDCPA, XXXX as the alleged debt as been satisfied. RENT RECOVERY SOLUTIONS and XXXX XXXX XXXX XXXXXXXX is in violation of 16 CFR 433.2 along with Title 15 USC 1692 debt collection practices per the FDCPA. RENT RECOVERY SOLUTIONS has committed identity theft as no permission was granted to house my personal information within their database. ALSO XXXX XXXX XXXX IS TRADEMARKED ON USPTO AND HOLD A COPYRIGHT and never gave RENT RECOVERY SOLUTIONS a license to use the mark. A invoice is attached",
+6448224,Checking or savings account,True,True,False,False,True,True,All facts supported; wants inferable from complaint.,"Headline: Citi Bank failing to credit $1000 bonus despite meeting all requirements
+Amount: $1000.00
+When: not stated
+Tried: Called Citi twice, spoke to reps and a supervisor, asked for back office and legal, was refused and hung up on
+Wants: The $1000 bonus credited and acknowledgment of breach of contract/fraud
+Best time: not stated","I received an offer from Citi Bank promising a bonus if I took the following "" simple '' steps : Open a new account between XX/XX/XXXX and XX/XX/XXXX - XXXX opened my account XX/XX/XXXX. 
+Fund your account within XXXX  days of opening your account- I received a deposit receipt from Citi showing my account was funded with {$76000.00} on XXXXThis amount was stated to get a {$1000.00} bonus. 
+Maintain your balance for XXXX consecutive days. 
+It is now XX/XX/XXXX and I still have not been credited with my bonus. My {$76000.00} is still in their bank. 
+I called the Citi phone number on XX/XX/XXXX and after going through many telephone trees was finally able to speak to XXXX who after countless questions and checking my account agreed that I had met all requirements but that she would not be able to credit my account at that time since the information had to be sent to "" investigations '' and that should take XXXX  days. My investigation number was XXXX. 
+On XX/XX/XXXX I called again having not been credited with the promised {$1000.00}. I spoke to XXXX who said it would be some time before I received the credit even though more than XXXX  days had passed. I asked for a supervisor and after waiting a long time on hold spoke to XXXX who told me there was nobody in the entire Citi system that I could talk to who could credit my account. He stated that many people had taken advantage of the offer and their was a backlog to issue credits which could be as much as XXXX  months. I asked to talk to the "" back office '' that he referred to as the entity issuing the credits. He refused. I asked to speak with the legal department. He refused. And then to add insult to injury he hung up on me. 
+This is very IMPORTANT. Part of the offer in fine print states that "" your checking account must remain open and in good standing from the time it's opened until you receive your bonus.Your bonus will be paid to your checking account within XXXX  days after you successfully complete all required activities. '' To me this is a breach of contract and fraudulent behavior on behalf of Citi.",
+6448827,"Payday loan, title loan, or personal loan",True,False,,False,True,True,Brief accurately reflects complaint's requests and facts.,"Headline: Complaint about CFPB closing case and Happy Money blocking payments, leading to default and account sale
+Amount: not stated
+When: When they attempted to make a payment on the account after updating banking information (specific date redacted as XXXX of XXXX)
+Tried: Called and emailed Happy Money to make payments; updated banking information and attempted payment; reached out to CFPB; responded to Happy Money regarding the Power of Attorney issue
+Wants: Case reopened with the CFPB; Happy Money to provide the signed document authorizing them to speak on the account; Happy Money to stop resisting help and retract the sale of the account
+Best time: not stated","I am requesting this complaint to be reopened due to the unfairness of the individual at the Consumer Finanancial Protection Bureau who closed the case when we reached out to request the company to pull the account back into their office and work with us in getting the account caught up due to Happy Money not assisting us in getting the payments made when calling in and emailing. The company failed to offer any other method of payment which was reasoning for the account going into default. Consumer Financial Protection Bureau failed to request the copy of the document signed by XXXX XXXX providing me XXXX XXXX permission to speak on his behalf on his account. 
+
+Happy Money is negligent in how the company mishandled in how the account was blocked from making payments. In this dispute, the company came with a legal guardian reasoning in not to work with us in getting the account caught up. The concern is, by selling this account off, is the company making their money in why Happy Money has been so resistant in helping us to get into the account. Even when we went into the account on the XXXX of XXXX to try and make a payment after my banking information was updated, the company quick responded they closed it on the day before which does not make sense. 
+
+There has been an oversight by Consumer Finanancial Protection, Bureau because when I responded to the company in not majoring on utiliziing the Power of Attorney as an escuse to help us in getting the account caught up, the company never responded with an alternative in doing everything to assist us with the account. I do no see how the Consumer Finanancial Protection Bureau did not address this but just closed out the complaint. This is exactly what we were dealing with in the company neglecting to work with us in getting into the account prior to it getting so far behind all the way up until it did get XXXX or more months in the hole. 
+
+I am requesting the case to be reopen and Happy Money to send the document XXXX XXXX XXXX signed online to have me addressed his account due to his XXXX. And the company stop resisting to help us catch up on the payments by so quickly selling the account off.",
+7062679,Mortgage,True,False,,False,True,True,Brief accurately summarizes complaint without inventing details.,"Headline: Complaint about mortgage lender and loan officer regarding unaffordable payment  
+Amount: not stated  
+When: XX/XX/XXXX  
+Tried: Contacted loan officer about payment being unaffordable; told they still qualified  
+Wants: not stated  
+Best time: not stated","On XX/XX/XXXX we closed on a new construction home built by XXXX XXXX. We had initiated this purchase in XXXX of XXXX by placing a 5 % deposit on the home that was only returnable if we did not qualify for the loan for the home. Between XX/XX/XXXX and XX/XX/XXXX the Interest rate increased significantly ballooning the monthly payment to where it represented 54 % of our household Gross income. with the interest rate rise I contacted our Loan Officer XXXX XXXX XXXX  # XXXX, who works with XXXX XXXX XXXX in regards to how with the increased interest rate the loans monthly payment was well beyond the realm of being affordable, and that I did not feel I qualified for a loan with such a large payment. XXXX stated that we still qualified for the loan and at no point advised us of any options to freeze the loan process. Ultimately a buyer purchased our existing home at full price which obligated me to sell the home and proceed with the purchase of the new home at a payment amount which was not affordable for our family, with the promise of future relief from a refinance in XXXX or XXXX of XXXX, this relief has been unforthcoming. This loan was underwritten and issued by Cross Country Mortgage LLC. In this case both XXXX XXXX XXXX and Cross Country Mortgage exhibited gross financial malfeasance.",
+7745153,Debt collection,True,False,,False,True,True,All brief facts are supported by complaint.,"Headline: complaint about Aidvantage receiving information without consent and identity theft handling  
+Amount: not stated  
+When: not stated  
+Tried: reported to FTC, attorney general, credit bureaus, and CFPB; Department of Education responded that they are not the appropriate company  
+Wants: loans removed from credit report immediately and closed; does not want to call Aidvantage's theft department or keep jumping through hoops  
+Best time: not stated","This is my XXXX complaint about Aidvantage. I will not continue to send information to a company that has violated my rights by receiving my information without my consent. Moreover, this same company said in a previous dispute that if this is a result of identity theft, file a report with the FTC. That has been done. Now, theyre saying to call their theft department. I will not keep jumping through hoops. It is my information that is being misused. I have done my due diligence by reporting this to the FTC, the attorney general, and the credit bureaus. In addition, the last CFPB complaint was sent to the department of education. The Department of Education responded and said they are not the appropriate company to address the issue. 
+
+If the loan originated from The Department of Education and they are unable to address the issue of identity theft and sending my personal information to Aidvantage without my consent, the loans need to be removed from my credit report immediately and closed.",
+7676375,Checking or savings account,True,True,True,False,True,True,Wants and facts match complaint exactly.,"Headline: Fraudulent calls led to account changes and unauthorized transactions, Chime denied dispute.
+Amount: $1200.00
+When: XX/XX/23
+Tried: Called Chime, filed dispute, received denial, called again, dispute reopened, received same denial letter.
+Wants: Wants $1200 refunded to their account
+Best time: not stated","On XX/XX/23 I received a phone call from Chime around XXXX and the guy said there may have been fraudulent activities on my account. He send me several verification codes and told me to uninstall my Chime app from my phon. I did all he said to do. He would send me a verification code and ask me what it was. I was on the phone with him from XXXX until around XXXX. He kept saying he was having computer problems with downloading. 
+With in that amount of time my address and phone number was changed on my account, there were XXXX transactions on my checking account from XXXX XXXX FL. There were XXXX transactions from XXXX for {$20.00}, XXXX transactions from XXXX for {$21.00} and XXXX transactions from XXXX XXXX XXXX in the amount of {$53.00}, {$54.00}, {$53.00} and {$64.00}. I called Chime and explained what happened, and they filled out a dispute form to return my money in the amount of {$1200.00}. On XXXX XXXX I received an email saying "" Based on our investigation, we have concluded no error occurred. Therefore, no funds will be credited to your account and this claim is considered closed. I called Chime after receiving this and said this is wrong. I live in WV and I did not make any purchases in FL. They reopened the dispute, and on XXXX XXXX I received the same letter. I did not make these purchases and I really need my money back. They wiped out my checking and savings accounts.",
+7583529,"Money transfer, virtual currency, or money service",True,False,,False,True,True,All brief facts and wants match complaint.,"Headline: Binance.US accused of refusing to credit deposit after website instruction error
+Amount: not stated
+When: over a year since the deposit was not credited; recent website error correction
+Tried: contacted Binance.US many times, provided screenshots, referenced other reports
+Wants: an attorney to take up a potential class action
+Best time: not stated","Binance.US has been pilfering customer funds via incorrect deposit instructions on their website. I have contacted them many times about this website error and my subsequent deposit that have not been credited. They have denied that the deposit instructions were faulty and refused to credit my funds, despite them being visible in my Binance.US wallet address, via the XXXX. The funds are not lost, nor are they in the wrong wallet, yet they simply refuse to acknowledge any mistake and refuse to give me credit for the deposit. 
+Its has now been over a year since they stole my money. There has recently just been a single update in the matter : The Binance.US website deposit instructions error has been corrected. The exact same error that I had alerted them to, yet they refused to acknowledge, was fixed. So I proceeded to contact them yet again, and ask for my money, explaining the situation. Still, no acknowledgement or responsibility. I have plenty of screenshots of the site and conversations, before and after. I also have found other reports of this exact same issue from others on the internet. The way they responded gave me the impression that this was a very common occurrence and thus a very lucrative scheme of theirs. I am now hoping find an attorney who will take up this potential class action.",
+7064636,Debt collection,True,False,,False,True,True,Brief accurately reflects complaint details,"Headline: Medical debts from XXXX companies on report, disputed before but reappeared
+Amount: not stated
+When: not stated
+Tried: Disputed multiple times, attached screenshots from XXXX XXXX
+Wants: Wants the medical debts removed and covered by public aid/government insurance
+Best time: not stated",These are medical debts and should have been covered through public aide/government insurance. I've disputed this plenty of times and this is the only thing on my report these XXXX companies. I attached screenshots of the companies from XXXX XXXX  and you will see XXXX different scores for some reason and they have changed the name or something because the XXXX is new but I remember seeing these amounts before and I disputed and it was gone but it's back now,
+7069329,Credit card or prepaid card,True,True,True,False,True,True,All facts match complaint exactly.,"Headline: Disputed unauthorized business card charges, credit reversed twice  
+Amount: $24000.00  
+When: Around XX/XX/2023  
+Tried: Spoke with fraud department, filed for 2nd review, asked for investigation details  
+Wants: To not be held liable for the charges and have the credit restored  
+Best time: not stated",Around XX/XX/2023 I noticed that my card was charged multiple times without my knowledge or authorization. I spoke with the fraud department and let them know that my card was stolen and that I did not make the transactions on the account. A couple of the transactions were done out of the Country which I had not traveled out the country. The rep told me that they would credit my account and do their investigation. A few weeks later I received a letter stating that they did not find any errors and reversed the credit. On XX/XX/XXXX I called Navy federal and spoke with a different rep and she told me that I could put in for a 2nd review which I did. I asked them in my digital message to send me what they actually did for their review and that I am not liable for any charges that I did not do so I don't understand why they reversed the credit. A week later they reversed the credit again and now are saying that I am liable for all the charges. This is for my business credit card with Navy Federal credit union. I've been a customer with Navy for years and never had an issue. Total amount of charges {$24000.00},
+4094607,,,,,,,,,,,"<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+</body>
+</html>"
+3140299,Student loan,True,False,,False,True,True,Wants and facts align with complaint.,"Headline: Complaint about contradictory info, forced forbearance suggestions, missing confirmation emails, and IBR denial over paystub detail
+Amount: not stated
+When: Today, XX/XX/2019
+Tried: Called today, provided paystub, disputed denial, spoke to representative, requested supervisor
+Wants: Accountability and to be contacted if further questions
+Best time: not stated","This company is horrible. My complaints are consistent with the lawsuit being filed. I constantly receive contradictory information from different representatives and have been constantly encouraged to enter forbearance periods. Every time I present my situation to a representative they have a different version of what is the best option for me though my situation and presentation of it has not changed. The ultimate response I always get is that "" If I can't afford the payments I should enter forbearance until I can. '' This occurred even when I stated that I want to find a way to make payments. On multiple occasions representatives have hurried to get me off the line with promises that a coming email would explain things. Those emails ( on at least two separate occasions ) never came. When I finally convinced someone to walk me through the IBR plan and what to submit, I was told that everything was set and that my new payment would be $ XXXX/month beginning XX/XX/2019 and that an email would confirm that on the XX/XX/2019. I asked repeatedly if the company needed anything else from me and was told no. No email came and when I called today ( XX/XX/2019 ) I was told that my application was denied because they did not have proof of income. I told them they did and pulled up the document. They stated that I did not write the pay frequency on the stub. I informed the representative that I was told everything was good and that the paystub indicated clearly how often I get paid which is every two weeks. The representative agreed and stated that she could could see that, but that the company wanted a handwritten explanation on the stub itself and that I would have to resubmit the form. I asked to speak to a supervisor and was informed again that "" the due could be extended '' or I could "" enter forbearance '' if this was too much for me. I'm exhausted from dealing with this company. They are unclear, unfair and not about the well being of their customers. Their policies are confusing and inaccessible and their representatives constantly encourage options that ultimately cost consumers money. I'm filing this complaint because I want accountability. The student loan scene is all but a crisis in this country and someone should hold these companies accountable. Please contact me if you have further questions.",
+7126713,Vehicle loan or lease,True,False,,False,True,True,Wants match complaint; all facts supported.,"Headline: DMV suspended license due to Upstart listing vehicle in caller's name without insurance
+Amount: not stated
+When: XX/XX/XXXX (DMV suspension); Upstart payment on XX/XX/XXXX
+Tried: Contacted Upstart; told it would take 2-3 weeks
+Wants: To have her name removed from the vehicle/title and her license suspension lifted
+Best time: not stated","XX/XX/XXXX DMV suspended my drivers license for not having auto insurance on a vehicle that is not mine. 
+
+My husband and I had this auto loan first with XXXX XXXX XXXX XXXX. My husband had that same car refinanced with Upstart Loans as the only owner. No co signer or a joint loan. 
+
+Upstart paid XXXX XXXX XXXX XXXX on XX/XX/XXXX which reflects on my credit report. I have my own vehicle financed with my own finance company, and the loan is in my name only. I have full auto insurance for my vehicle, therefore my license should not be listed with the DMV by this company with my name. 
+
+When the car was approve and refinanced by Upstart Loans, they should have updated the title with the owner of that loan. 
+
+It appears Upstart falsified my name on this tag and tittle, due to the fact, I do not have a loan with them, and they do not have any correspondence showing a application, or my signature for his vehicle. This loan is not on my credit report, but listed on my husbands due to he is the owner. 
+
+I was told by Upstart today, that this will take up to 2-3 weeks, therefore my drivers license is suspended on a vehicle I do not own. 
+
+This is NOT LEGAL!",
+3060314,Mortgage,True,True,True,False,True,True,Brief accurately reflects complaint details.,"Headline: Home damaged by tornado/hail; mortgage company holding insurance funds  
+Amount: {$1700.00}  
+When: not stated  
+Tried: Contacted Caliber loss draft department; mortgage company gave conflicting stories; refused to endorse second check  
+Wants: Mortgage company to pay arrearages or return insurance funds; clarify $1700 check  
+Best time: not stated","My home was damaged by a massive tornado and hail in XXXX. I have been very sick and out of work since XX/XX/XXXX. I used my mortgage payments to pay for removal of massive trees that were uprooted and thrown on my home due to safety concerns along with repairs to deck railings. The insurance company sent funds to mortgage company and mortgage company will not pay my arrearages nor will they return my funds to me to pay them. They keep giving me different stories and holding my funds. There are still Thousands of dollars in repairs to be done, but contractors will not even come out for estimates now because they know they will not get paid and they cant afford to wait 6 months for their money either. This is fraud on part of the mortgage and insurance company. 
+
+Caliber loss draft department XXXX XXXX XXXX XXXX, oh. XXXX XXXX The insurance company also sent another check that I refuse to endorse, because my ex husband is no longer on the deed. They already put a stop payment on it. {$1700.00}. They want we to send it back to them????? 
+XXXX XXXX XXXX XXXX XXXX XXXX",
+7311740,Debt collection,True,False,,False,True,True,Brief accurately reflects complaint details,"Headline: Collection placed by Consumer Adjustment Company on active memberships without verification  
+Amount: not stated  
+When: not stated  
+Tried: not stated  
+Wants: not stated  
+Best time: not stated","A collection was placed on my XXXX & XXXX account by a Consumer Adjustment Company Incorporated who has not provided me with a verified debt, original documentation or even provided me with notice that they own the debt. The first I have heard of this company was on my credit report. The Company is stating they are collecting a debt on behalf of XXXX XXXX, but I've only ever own two memberships by XXXX XXXX and both are currently active. ( Please see attached documentation )",
+4422171,Debt collection,True,True,True,False,True,True,"Wants inferred, facts match complaint.","Headline: Consumer disputes collection debt, denies opening account, faces legal threats  
+Amount: almost {$10000.00}  
+When: not stated  
+Tried: Called collection company and creditor, filed report, filed new complaint, investigated but held responsible  
+Wants: Wants debt removed, not to pay, stop calls and legal action  
+Best time: not stated","On XXXX, I started receiving collection letter from Radius Global Solution LLC under behalf of XXXX XXXX I called that company to find what was about, they explained me that I have a unpaid credit line for almost {$10000.00}, which I explained them that I have never requested or opened a credit line with them. So I called XXXX XXXX and they told me same information and that the account was opened in XXXX. Immediately I made a request report. Days past and no word from them. I went to XXXX XXXX and I saw my score was extremely bad, then I called them again filing a new complaint, but basically they told me they would investigate and the results came back and made me responsible of that debt. today XX/XX/XXXX after several complaint, XXXX XXXX wants to make me pay a debt is not mine, including receiving calls from them telling if I don't pay they will take legal actions against me. This situation is affecting my life because I unable to do any king of business or preform work base on my career.",
+4695847,Debt collection,True,True,False,False,True,True,Brief accurately reflects complaint's requested remedy and facts.,"Headline: Complaint against Goldman Sachs over unauthorized Apple Card and disputed late payment
+Amount: not stated
+When: not stated
+Tried: Called Goldman Sachs Apple Card; was told the account was auto-linked to App Store, but they refused to remove the late payment
+Wants: Remove the late payment from credit report
+Best time: not stated","I am submitting this complaint because I am being extremely affected by Goldman Sachs, They are being completely unfair and I dont know how to get ahold on them but through this portal.
+
+I want to express that I have suffered a big impact in my credit score and I have lived one of the worst periods of my life with all this situation.
+
+I started this Goldman Sachs accounts Apple card account online, I never received this card, leave alone any statements or bills. I did not have possession of the card. 
+Later I found that I had been marked late for a XXXXcent charge on my credit report. 
+
+When I called Goldman Sachs Apple card, I was told that my account was automatically linked to my XXXX  XXXX app store, and that I was prompted for this when I was setting up this account. 
+
+I certainly did not authorize this, and if it was done, it was in the fine print that a customer can not even see. 
+
+This late payment has destroyed my credit, I was about to file suit against Goldman Sachs, who have refused to remove the late payment.
+
+As a last resort prior to taking legal action, Im submitting this complaint to see if Goldman is willing to resolve this matter by remove the late payment from my credit report. 
+
+Account information : Account number : XXXX Open date : XX/XX/20 Balance : {$0.00} Remedy : remove the late payment from my credit report.",
+7068100,Checking or savings account,True,False,,False,True,True,"Summary aligns with complaint, no invented details.","Headline: Complaint about unauthorized sharing of financial info to third parties and broadcast
+Amount: not stated
+When: not stated
+Tried: not stated
+Wants: not stated (implicitly wants action, but exact request not stated)
+Best time: not stated","My personal financial information was provided to a third party without my consent. In fact it was provided to multiple parties which violated my rights. 
+I am complaining because my banking institutions shared information that was then told to me by someone that has no business having information regarding my accounts balances. 
+
+It was shared repetitively to multiple people and entities including but not limited to investigative agencies without legal accessibility requirement met It was also disclosed in a room full of additional ears. So not only was my information obtained it was broadcasted to multiple others without regard for my rights",
+6280021,Checking or savings account,True,False,,False,False,True,Wants not stated in complaint.,"Headline: Bank repeatedly reverses returned funds after fraud claim, account now negative
+Amount: not stated
+When: not stated
+Tried: Contacted Bank of America branch multiple times
+Wants: To have the funds restored and the bank to stop taking back the money
+Best time: not stated","Some lady started withdrawal funds from my savings account without my knowledge. I dont know how someone can just take out my money from my account and the bank not notify me of any suspicious activity. I have brought it up with my bank. Which is Bank of America. They looked into it and returned the funds the first time I went in. Few months later they took back the funds and said it was out of their limitation days, which is 180 days. I went back to the branch to talk to a representative. And some how he got some of my funds back to my saving account, then few months later they took it back again. Long store short my account is negative balance as of today. I dont know what kind of game this bank is playing but it not fare to the people. Because we closed that account and opened a new one. 
+Date stated was XXXX XXXX XXXX XXXX XXXX",
+6377722,Checking or savings account,True,False,,False,True,True,Brief accurately reflects complaint requests and details.,"Headline: Complaint about savings account being converted to checking; requesting exception to keep it as savings or reversal after conversion.
+Amount: not stated
+When: Recently received notice; conversion scheduled in 30 days
+Tried: Spoke with several representatives and a manager who cited Federal Reserve Regulation D; told nothing can be done
+Wants: Keep account as savings account, willing to pay fees; if converted, convert back or open new savings account with same terms
+Best time: not stated","Im writing to express my discontent about a matter involving my savings account. I received a notice recently informing me that my savings account would be converted to a checking account in 30 days due to exceeding a specific amount of withdrawals and transfers. In response to this notice, I contacted customer service to find out if its possible to make an exception to allow the account to remain a XXXX XXXX savings account. I spoke with several representatives and ultimately a XXXX by the name of XXXX who informed me that the bank is mandated to comply with Federal Reserve Regulation D which limits the number of withdrawals and transfers from the savings account and unfortunately there was nothing that would be done to intervene. I researched Regulation D and found out that the Federal Reserve Board lifted it in XX/XX/2020 which allowed banks to immediately suspend compliance with this regulation. 
+
+Contrary to what I was told on the phone, banks are no longer mandated to comply with this regulation and it is up to their discretion as to whether or not and how it is enforced ( e.g. fee assessments ). Im more than happy to comply with the necessary fees if the account is allowed to remain the same type it currently is. As a long-time customer, Im requesting an exception be made to allow my account to remain a XXXX XXXX XXXX account and serve as overdraft protection for another account as is currently configured. The account has also been affected by fraudulent activity a few times which has affected its status. 
+
+Ive spoken with several back representatives about this matter and am ultimately being told that it isnt possible to stop the account conversion process. If there is absolutely no workaround to stop the conversion process, Im requesting an accommodation to be made after the account is converted to a checking account. Im requesting that the checking account be converted back into a XXXX XXXX XXXX account or that I will be allowed to open another XXXX  XXXX XXXX account, with the same terms and conditions as the current savings account. 
+
+I hope your organization is able to assist me in coming to an amenable solution. Thanks for your time and cooperation.",
+7611163,Mortgage,True,True,True,False,False,True,Wants claim not explicitly stated in complaint.,"Headline: Refinance with Spring EQ stalled, restarted multiple times, and communications ignored.
+Amount: $520.00
+When: Process started around late XXXX early XXXX of XXXX XXXX; appraisal fee paid on XX/XX/XXXX; messaged Spring on XX/XX/23.
+Tried: Provided all requested documentation, messaged Spring EQ (got escalation), emailed and tried to contact XXXX XXXX multiple times.
+Wants: Spring EQ to respond and complete/close the loan without further restarts.
+Best time: not stated","We started our refinance through XXXX Mortgage. They use the company Spring EQ for loans such as ours that involve refinancing and HELOC. This process started around late XXXX early XXXX of XXXX XXXX. We provided everything that XXXX needed and they would keep in touch with Spring EQ. As far as the first few months of the loan process go we are in the dark or have bits of information from XXXX about XXXX XXXX because Spring won't answer them or us. They kept requesting documentation all throughout the loan process even after we all assumed the underwriting process was over since it would take XXXX days which was quoted. We paid {$520.00} on XX/XX/XXXX to Springs appraisal company XXXX XXXX and got the paperwork back XXXX first. The loan process has taken so long that it has been restarted twice and now in a few days it will be a third time. The first loan I and my husband was apart of, so the appraisal was in my name since I paid for it. Now before we were told closing is soon they get a notice back from the appraiser that they couldn't go through with Springs request to change the name from mine to my husbands on the appraisal document. That it was illegal and Spring should have known that process. A simple name change turned into weeks of waiting and no response. The company has continued to ignore XXXX mortgage who has been waiting for a clear to close. I messaged Spring on XXXX today XX/XX/23 and they said the issue would be escalated and XXXX XXXX would reach out. I was told she was an XXXX, but when she called she said there was nothing more she could do and would escalate the issue again. We emailed XXXX XXXX as well and tried to contact her multiple times to no avail and it has been weeks. We don't have dates of action from Spring EQ because they haven't performed any actions. Spring had us lower our requested amount due to our appraisal being low ( though other places had us at a higher rate ). Each time we push out closing we increase the rates and lose the original amount we wanted. It's almost like they do it on purpose. My husband has taken off time for work to provide documents and deal with XXXX through XXXX. We both have received papers in the mail stated the loan was terminated due to incomplete credit application so we wonder if the company has been taking our personal information, but not doing anything at all.",
+7484180,Mortgage,True,True,True,False,True,True,Wants reasonably inferred; all facts supported.,"Headline: Mortgage company paid homeowners insurance without consent and opened escrow account
+Amount: {$4700.00}
+When: On XX/XX/XXXX, 3 days before insurance expiration
+Tried: Called Insurance Department and escrow department multiple times; got no resolution
+Wants: Removal of forced escrow account and explanation
+Best time: not stated","My insurance company, XXXX XXXX XXXX XXXX, was trying to get a better home Insurance Rate from XXXX. It took 20 days to get a response from XXXX but finally on XX/XX/XXXX, 3 days before the expiration day, we had it. It went from XXXX XXXX plus to XXXX XXXX plus just removing my personal property from the insurance. We tried to make the full payment the same day we were told that Freedom Mortgage had already paid in full the XXXX XXXX dollars a few weeks before. Not an e-mail, not a letter, no information at all even when my account shows clearly that I do not want an escrow account. 
+When I checked the Freedom Mortgage account a few days later I found a {$4700.00} escrow account not only for the insurance they paid but also for my end of the years Taxes. 
+After checking the information, they posted on the web site, I called the Insurance Department to ask Why there was an escrow account and why they had paid for my insurance. He was not able to answer any of the questions, so he made a three line with the escrow department. We went over both questions, so the Insurance Dpmt guy went to check with XXXX about my policy. The communication broke so I had to call back again. Insurance guy told me ( a new one ) told me XXXX  won't give them the info What???? 
+Then the escrow Department lady told me that it was a company policy to have an escrow account open, even when I told her that it was paid before the deadline ( XX/XX/XXXX ) We argue for quite a few minutes with no agreement. Sorry but if this is not racketeering, it is very close. I'm XXXX XXXX XXXX coming out of a XXXX, XXXX XXXX so I had to involuntarily stop working 3 years ago. My monthly payment has gone from {$1200.00} to {$1800.00}. Let me know if you need any doc 's to send them immediately. 
+Thanks. XXXX XXXX XXXX",
+6964013,Debt collection,True,False,,False,True,True,Brief accurately reflects complaint details,"Headline: Customer requests debt validation, alleges false credit reporting  
+Amount: not stated  
+When: not stated  
+Tried: Requested debt validation from the company; they failed to send the information  
+Wants: Wants debt validation and correction of false credit reporting; suspects identity theft may be involved  
+Best time: not stated","I have been requesting for this company to send me validation of debt to clarify everything about this alleged debt but not only they have failed to send me information, but they are also reporting false information to the credit bureau which is damaging my character. My information may have gotten to the hands of the wrong people and this may be the result of such an incident.",
+7646689,Debt collection,True,True,True,False,True,True,No wants stated; facts match complaint.,"Headline: Collection account on credit report not found by company
+Amount: $1700.00
+When: not stated
+Tried: Called company; they could not find account with name or SSN
+Wants: not stated
+Best time: not stated","They reported to credit bureau that I have an account in collections with them ( XXXXXXXX XXXX XXXX XXXX ) from "" Sapientes Funding LLC '' in the amount of {$1700.00}. 
+I called them when I found this on my credit report and they could not find an account in my name or with my social security number, so basically it did not exist.",
+3445799,Checking or savings account,True,True,True,False,True,True,Brief matches complaint facts and request.,"Headline: Check fraud dispute with Citibank e-check payment
+Amount: $1000.00
+When: not stated
+Tried: called Citibank several times and visited a local branch, but never got past the call center
+Wants: assistance with Citibank's handling of the fraudulent check
+Best time: not stated","A check for {$1000.00}, made out to my landlady, was mailed by Citibank via e-check / bill pay to her bank, XXXX XXXX XXXX XXXX XXXX. The check was cashed at a XXXX XXXX branch by someone who faked her signature. My landlady does not have a current XXXX XXXX account. 
+
+My landlady and I went to XXXX XXXX XXXX XXXX XXXX together, and got a letter stating that the check had never arrived at their office. That letter is attached. 
+
+I believe Citibank is culpable. How could the thief have gotten hold of the check without their complicity or negligence? 
+
+Citibank 's handling of this matter has been awful. I have called several times, and never gotten past the call center. I have gone into the local Citibank branch and watched while bank personnel have called, without getting past the call center. 
+
+Thank you for your assistance.",
+2705237,Debt collection,True,False,,False,True,True,Brief matches complaint; wants not stated.,"Headline: Collection account reported without validation, re-aged, and duplicated
+Amount: not stated
+When: 4 years ago
+Tried: complained to XXXX about a charge and they did not respond
+Wants: not stated
+Best time: not stated",XXXX XXXX XXXX is reporting a collection account on my credit report that they have made absolutely no attempt to validate the debt before placing on my credit. I have never heard from them and when I went to apply for a loan I learned that they were reporting an account that Progressive Insurance charged off 4 years ago. Not only did they not validate the debt before reporting it they are now re-aging the debt. They show the account opened in XXXX when it charged off at the end of XXXX. I complained to XXXX about a charge and they did n't respond and it led to a charge off. The account is also duplicated. That means there are XXXX violations due to a single trade line.,
+2705223,Debt collection,True,False,,False,True,False,Brief says unspecified date but complaint states opening date.,"Headline: Collection account reported without validation, re-aged, and duplicated by multiple agencies.
+Amount: not stated
+When: 4 years ago (charge-off occurred; account opened on an unspecified date)
+Tried: Complained to XXXX XXXX about a charge; no response received
+Wants: not stated
+Best time: not stated",XXXX XXXX XXXX is reporting a collection account on my credit report that they have made absolutely no attempt to validate the debt before placing on my credit. I have never heard from them and when I went to apply for a loan I learned that they were reporting an account that XXXX XXXX charged off 4 years ago. Not only did they not validate the debt before reporting it they are now re-aging the debt. They show the account opened in XX/XX/XXXX when it charged off at the end of XX/XX/XXXX. I complained to XXXX XXXX about a charge and they did n't respond and it led to a charge off. The account is also duplicated. XXXX XXXX is also reporting the account. That means there are 3 violations due to a single trade line.,
+5095645,Debt collection,True,False,,False,True,True,Brief matches complaint facts and implied request.,"Headline: Check n Go collections repeatedly calling workplace despite no balance.
+Amount: not stated
+When: today
+Tried: contacted collections dept, explained no pending debt, was told no balance and would receive verification email
+Wants: stop the calls and seek legal advice
+Best time: not stated","I am working XXXX XXXX  since XX/XX/XXXX to present. Today, XX/XX/XXXX at XXXX, I received a call from my place of employment which is the XXXX XXXX XXXX XXXX I was informed that Check n go has been calling several times repeated each day and claimed that they are a collections dept. I was given the contact phone number which is XXXX and they answered collections dept. I informed that I do not have a pending debt with them but I was a previous customer and informed of the situation. The person I spoke to by the name of XXXX informed me that I do not have a balance and that I would receive an email with a verification letter. At XXXX today, I received another email from work informing me that they have been calling 3-4 times a day! I will also seek legal advice!!",
+5103965,Debt collection,True,False,,False,True,True,Brief accurately reflects complaint details.,"Headline: TransUnion rejected police report and reopened reinvestigation without response.
+Amount: not stated
+When: not stated
+Tried: Sent police report to all three credit bureaus; spoke with bank and flagged accounts as fraud.
+Wants: TransUnion to acknowledge police report and remove fraudulent auto loan/charge-off.
+Best time: not stated",I had sent in a police report to transunion for a auto loan that was the result of identity theft to all three credit bureaus. XXXX and XXXX removed the fraudulent auto loan from my credit report where my identity was stolen which was used to acquire a $ XXXX auto loan from XXXX XXXX in my name in which the thieves allowed the loan to go delinquent and leave me with a charge off after they used my identity. Transunion rejected my police report and opened a reinvestigation and haven't responded back to me with the results or even acknowledged the police report which provided all the information and there was no lack of sufficient evidence. I already spoke with the bank themselves and flagged all accounts as fraud and told them that none of the actions within XXXX XXXX was me.,
+2561541,Debt collection,True,False,,False,False,True,Added 'collection account resolved' to wants; not explicitly asked.,"Headline: Customer disputes charges after service cancellation; seeks waiver of billing beyond one month of use.
+Amount: not stated
+When: not stated
+Tried: Contacted them with a financial counselor, was on hold over an hour and a half, forwarded to four different areas, and was denied waiving additional billing.
+Wants: Only be charged for one month of service; any additional billing waived and collection account resolved.
+Best time: not stated","To Whom It May Concern, I am working with a financial and housing counselor who is writing this on my behalf as I am XXXX XXXX  and only had this phone service for XXXX for two weeks. I am not aware of a verbal or written contract that was placed for the account and am asking that any concessions that can be made on my behalf due to any continuous billing be considered forgiven or waived. <P/>I am willing to pay for the service for the two weeks of my usage but beyond that I am not willing to pay. <P/>I had no way to contact XXXX after having their service terminated as I never received any further bills or statements. I have returned their equipment and am requesting that I only be charged for the 1 month of service I had and any additional billing be waived as this account has been sent to collection for XXXX and originally the service was quoted to me at XXXX/month. <P/>I reached out to them with a financial counselor on XX/XX/XXXX after still receiving collection acct notices to try to make the debt solvent and was put on hold for over an hour and a half. I was denied any ability to have any additional billing waived as they forwarded me to 4 different areas and stated I would have to pay the above mentioned amount that had been sent to collections because the acct was closed even though this was months after I had turned the service off.",
