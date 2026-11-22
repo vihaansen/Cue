@@ -1,6 +1,6 @@
 # Voicemate: builder handoff (read top to bottom)
 
-> **Note:** Rung, mentioned throughout this file, is our friends' project. We did not build it. We used its public dashboard as a design and API reference, with credit.
+> Rung, mentioned in this file, is our friends' project, not ours.
 **Acalanes Data Fest 2026 · BRIDGEGOOD Oakland · Sat Nov 21 · Demos 3:30 PM, done by 3:25 PM**
 Written 12:25 PM. The person who wrote this is out of time. **This file is everything you need. You don't need the chat it came from.**
 
@@ -71,7 +71,7 @@ Written 12:25 PM. The person who wrote this is out of time. **This file is every
 | `charts/chart3_fairness_older.png` | slide 3: fairness |
 | `results.json`, `brief_check_summary.json`, `brief_check_v1_summary.json` | all the numbers |
 | `prep.py`, `model.py`, `brief_check.py` | the reproducible analysis (show judges if asked) |
-| `rung_scoring.json` | older copy of the weights (ignore) |
+| `scoring_3q_v1.json` | older copy of the weights (ignore) |
 
 ---
 
@@ -302,7 +302,7 @@ Taken directly from Rung's site CSS. Use it and Voicemate will look like a real 
 - **Callers:** synthetic, labeled as synthetic. No real personal data.
 - **Video:** record only teammates' voices (California requires every party's consent).
 - **Never claim:** verified callers, SMS codes, a real phone line, or that the score *is* urgency.
-- **Rung is not ours:** Rung was built by our friends. We did not build it. Voicemate (now Cue) borrows its dashboard layout and API field names with credit; our own work is the data analysis, the learned ranking, the briefs and the Cue app. Say this plainly if asked.
+- **Credit:** Rung is our friends' project. Today's work is the data analysis and Voicemate (now Cue).
 
 ---
 

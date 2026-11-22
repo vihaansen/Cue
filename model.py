@@ -1,9 +1,9 @@
-"""Cue x CFPB (earlier label: "Rung"; Rung is our friends' project, not ours): which 3 intake questions matter, and does ranking beat first-come?
+"""Cue x CFPB: which 3 intake questions matter, and does ranking beat first-come?
 
 Target: needs_action = company closed with monetary/non-monetary relief, or
 responded late. This is a STAND-IN for urgency, not urgency itself.
 
-Outputs: charts/*.png, results.json, rung_scoring.json, fairness_*.csv
+Outputs: charts/*.png, results.json, scoring_3q_v1.json, fairness_*.csv
 """
 import json
 
@@ -228,7 +228,7 @@ json.dump({
     "questions": [{"key": c, "ask": LABEL[c]} for c in top3],
     "intercept": round(float(lr.intercept_[0]), 4),
     "weights": weights,
-}, open("rung_scoring.json", "w"), indent=1)
+}, open("scoring_3q_v1.json", "w"), indent=1)
 
 
 # Within-company AUC: how well does the ranking sort ONE company's callers?

@@ -374,7 +374,7 @@ export default function QueuePage({ board, now, org, liveCall, holdId, prefs, on
     finally { setBusy(null); }
   }
 
-  // keyboard: ↑ ↓ to move, Enter to call back (same shortcuts as Rung, our friends' project)
+  // keyboard: ↑ ↓ to move, Enter to call back
   useEffect(() => {
     const h = (ev) => {
       const t = ev.target;

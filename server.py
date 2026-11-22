@@ -2,8 +2,7 @@
     export ADAPTION_API_KEY="$(pbpaste)"; pbcopy </dev/null
     .venv/bin/uvicorn server:app --port 8000
 Scoring/queue work without a key; classify/brief/translate need it.
-Field names follow Rung's queue (score.urgency/value/aging/total, tier, trust).
-Rung is our friends' project; we did not build it and only reuse its public field names, with credit.
+Queue fields: score.urgency/value/aging/total, tier, trust.
 """
 import json
 import math
@@ -215,7 +214,7 @@ def parse_brief(raw):
     return out
 
 
-# ---------------- API (names follow Rung, our friends' project) ----------------
+# ---------------- API ----------------
 class LookupIn(BaseModel):
     phone: str
 
@@ -338,7 +337,7 @@ def reset():
     return {"ok": True}
 
 
-# ---------------- dashboard extras (modelled on Rung's dashboard API; Rung is our friends' project) ----------------
+# ---------------- dashboard extras ----------------
 def find(item_id):
     x = next((x for x in QUEUE if x["id"] == item_id), None)
     if not x:

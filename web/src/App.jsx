@@ -16,7 +16,7 @@ export function Mark({ size = 18, ring = "#f4f1ea" }) {
   );
 }
 
-/* Toasts (timings borrowed from Rung, our friends' project: 3.5 s, 6 s with an action, 7 s for errors) */
+/* Toasts: 3.5 s, 6 s with an action, 7 s for errors */
 function useToast() {
   const [t, setT] = useState(null), tm = useRef();
   const show = useCallback((x) => { clearTimeout(tm.current); setT({ ...x, id: Date.now() }); tm.current = setTimeout(() => setT(null), x.tone === "error" ? 7000 : x.action ? 6000 : 3500); }, []);

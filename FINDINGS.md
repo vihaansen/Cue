@@ -1,7 +1,5 @@
 # Cue × CFPB: findings (slide-ready)
 
-> In earlier drafts this model was labelled "Rung". Rung is our friends' project, which we did not build; the model and results here are ours, so they are now labelled Cue.
-
 ## Data
 - **Source:** CFPB Consumer Complaint Database, bulk file released Nov 21 2026 (public domain, CC0).
 - **Sample:** 60,000 complaints received Nov 2024 – Sep 2026, 6,000 from each of 10 products. Excluded: credit reporting (10.3M of 11.5M complaints, mostly template filings) and cases still in progress.
@@ -66,6 +64,6 @@ Story: v1 dropped the dollar amount half the time because the format had no slot
 
 ## Files
 - `charts/chart1_auc_vs_questions.png`, `charts/chart2_ranking_vs_fcfs.png`, `charts/chart3_fairness_older.png`
-- `results.json` (all numbers), `rung_scoring.json` (3-question weights for Cue's scorer)
+- `results.json` (all numbers), `scoring_3q_v1.json` (3-question weights for Cue's scorer)
 - `fairness_by_group.csv`, `fairness_by_state.csv`, `fairness_by_channel.csv`, `within_company_auc.csv`
 - `prep.py`, `model.py`, `brief_check.py`

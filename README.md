@@ -4,9 +4,7 @@ Cue answers a support line, asks the three questions that real data showed matte
 
 Built for Acalanes Data Fest 2026.
 
-## Credit: Rung is not ours
-
-Cue's dashboard layout and its API field names (`score.urgency/value/aging/total`, `tier`, `trust`, `lookup_caller`, `triage_call`) are modelled on **Rung**, a project built by our friends. **We did not build Rung.** Our own work is the CFPB data analysis, the learned 3-question ranking model, the tested six-line briefs, and the Cue app and server. Older files in this repo used "Rung" as a working label for our model; those labels now say Cue.
+Credit: the dashboard layout and API field names are modelled on Rung, a project built by our friends, not by us.
 
 ## What's here
 
