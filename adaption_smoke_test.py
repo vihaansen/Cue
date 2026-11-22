@@ -1,4 +1,4 @@
-"""Adaption smoke test for Rung briefs.
+"""Adaption smoke test for Cue briefs.
 
 Setup (key stays in your shell, never in code or chat):
     pip install adaption

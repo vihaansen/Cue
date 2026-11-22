@@ -28,7 +28,7 @@ export function phoneFmt(p) {
   const d = String(p || "").replace(/\D/g, "").replace(/^1(?=\d{10}$)/, "");
   return d.length === 10 ? `(${d.slice(0, 3)}) ${d.slice(3, 6)}-${d.slice(6)}` : p;
 }
-export function wc(ms) {            // waiting clock, like Rung: 45s · 4:12 · 1h 3m
+export function wc(ms) {            // waiting clock in Rung's style (our friends' project): 45s · 4:12 · 1h 3m
   const s = Math.max(0, Math.floor(ms / 1000));
   if (s < 60) return `${s}s`;
   if (s < 3600) return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
@@ -69,7 +69,7 @@ export function useNow(ms = 1000) {
   return now;
 }
 
-/* Rung's rank flags: "New" for a fresh id, "Up from #n" when it overtook someone. 8 s each. */
+/* Rank flags in Rung's style (our friends' project): "New" for a fresh id, "Up from #n" when it overtook someone. 8 s each. */
 export function useRankFlags(ids) {
   const prev = useRef(null), seen = useRef(new Set());
   const [flags, setFlags] = useState({});

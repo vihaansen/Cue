@@ -2,7 +2,8 @@
     export ADAPTION_API_KEY="$(pbpaste)"; pbcopy </dev/null
     .venv/bin/uvicorn server:app --port 8000
 Scoring/queue work without a key; classify/brief/translate need it.
-Field names match Rung's queue (score.urgency/value/aging/total, tier, trust).
+Field names follow Rung's queue (score.urgency/value/aging/total, tier, trust).
+Rung is our friends' project; we did not build it and only reuse its public field names, with credit.
 """
 import json
 import math
@@ -22,7 +23,9 @@ S = json.loads((ROOT / "voicemate_scoring.json").read_text())
 W, B, PCT, TAX = S["weights"], S["intercept"], S["percentiles_of_p"], S["taxonomy"]
 MODEL = "deepseek-v4-flash"
 LOCK = threading.Lock()
-QUEUE_FILE, CALLERS_FILE = ROOT / "queue.json", ROOT / "callers.json"
+import os
+DATA = Path("/tmp") if os.environ.get("VERCEL") else ROOT  # Vercel's file system is read-only except /tmp
+QUEUE_FILE, CALLERS_FILE = DATA / "queue.json", DATA / "callers.json"
 
 app = FastAPI()
 _client = None
@@ -91,8 +94,24 @@ def load(path, default):
     return json.loads(path.read_text()) if path.exists() else default
 
 
+REDIS_URL = os.environ.get("KV_REST_API_URL") or os.environ.get("UPSTASH_REDIS_REST_URL")
+REDIS_TOKEN = os.environ.get("KV_REST_API_TOKEN") or os.environ.get("UPSTASH_REDIS_REST_TOKEN")
+STATE = {"dirty": False}
+
+
+def redis(*cmd):
+    """One Redis command over Upstash's REST API (shared by every serverless instance)."""
+    import urllib.request
+    req = urllib.request.Request(REDIS_URL, data=json.dumps([str(c) for c in cmd]).encode(), method="POST",
+                                 headers={"Authorization": f"Bearer {REDIS_TOKEN}", "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=5) as r:
+        return json.loads(r.read()).get("result")
+
+
 def save(path, data):
-    path.write_text(json.dumps(data, indent=1))
+    STATE["dirty"] = True  # pushed to Redis after the request when Redis is configured
+    if not REDIS_URL:
+        path.write_text(json.dumps(data, indent=1))
 
 
 QUEUE = load(QUEUE_FILE, [])
@@ -101,9 +120,11 @@ DEFAULT_CALLERS = {
         {"at": "2026-11-14 15:36", "summary": "Card charge she didn't make, $4,200", "duration_s": 168}]}
 }
 CALLERS = load(CALLERS_FILE, json.loads(json.dumps(DEFAULT_CALLERS)))
-SETTINGS_FILE = ROOT / "settings.json"
+SETTINGS_FILE = DATA / "settings.json"
 SETTINGS = {"company": "Bank of Bridgegood", "repsOnShift": 1, "avgHandleMin": 3,
-            "baselineHoldMin": 23, "reexplainMin": 3}
+            "baselineHoldMin": 23, "reexplainMin": 3,
+            "phoneNumber": os.environ.get("CUE_PHONE_NUMBER", "+19256034116")}
+LIVE = {}  # Vapi call id -> caller on the line right now
 SETTINGS.update(load(SETTINGS_FILE, {}))
 
 
@@ -194,7 +215,7 @@ def parse_brief(raw):
     return out
 
 
-# ---------------- API (names mirror Rung) ----------------
+# ---------------- API (names follow Rung, our friends' project) ----------------
 class LookupIn(BaseModel):
     phone: str
 
@@ -317,7 +338,7 @@ def reset():
     return {"ok": True}
 
 
-# ---------------- dashboard extras (mirror Rung's dashboard API) ----------------
+# ---------------- dashboard extras (modelled on Rung's dashboard API; Rung is our friends' project) ----------------
 def find(item_id):
     x = next((x for x in QUEUE if x["id"] == item_id), None)
     if not x:
@@ -344,7 +365,8 @@ def board():
     done_today = [x for x in done if (x.get("doneAt") or 0) >= day0]
     returning = sum(1 for x in done_today if x["trust"] == "recognized")
     total = len(done_today) * SETTINGS["baselineHoldMin"] + returning * SETTINGS["reexplainMin"]
-    return {"now": now, "queued": queued, "inProgress": in_progress, "done": done, "settings": SETTINGS,
+    live = sorted(LIVE.values(), key=lambda x: x.get("startedAt", 0))
+    return {"now": now, "queued": queued, "inProgress": in_progress, "done": done, "settings": SETTINGS, "live": live,
             "timeSaved": {"callers": len(done_today), "returningCallers": returning, "totalMin": total,
                           "baselineHoldMin": SETTINGS["baselineHoldMin"], "reexplainMin": SETTINGS["reexplainMin"]}}
 
@@ -480,15 +502,52 @@ def _vapi_queue_hangup(msg, call):
     return {"ok": True}
 
 
+VAPI_SECRET = os.environ.get("VAPI_SERVER_SECRET")
+ASSISTANT_ID = os.environ.get("ASSISTANT_ID")
+CALLS_PER_NUMBER_PER_DAY = int(os.environ.get("CALLS_PER_NUMBER_PER_DAY", "3"))
+CALLS_PER_DAY = int(os.environ.get("CALLS_PER_DAY", "40"))
+
+
+def _vapi_live(msg, call):
+    cid = call.get("id")
+    if not cid:
+        return
+    status = msg.get("status")
+    if msg.get("type") == "status-update" and status in ("ringing", "queued", "in-progress"):
+        phone = (call.get("customer") or {}).get("number") or "unknown"
+        known = CALLERS.get(phone)
+        LIVE.setdefault(cid, {"key": cid, "phone": phone, "name": (known or {}).get("name"), "known": bool(known),
+                              "startedAt": time.time() * 1000, "stage": "listening"})
+        STATE["dirty"] = True
+    elif msg.get("type") == "end-of-call-report" or status == "ended":
+        if LIVE.pop(cid, None) is not None:
+            STATE["dirty"] = True
+    for x in list(LIVE.values()):  # drop anything stuck for over 15 minutes
+        if time.time() * 1000 - x.get("startedAt", 0) > 15 * 60 * 1000:
+            LIVE.pop(x["key"], None)
+
+
 @app.post("/vapi/tools")
 async def vapi_tools(request: _VapiRequest):
+    if VAPI_SECRET and request.headers.get("x-vapi-secret") != VAPI_SECRET:
+        raise HTTPException(401, "bad secret")  # only Vapi may post call events
     body = await request.json()
     msg = body.get("message", {})
     call = msg.get("call") or {}
-    if msg.get("type") == "end-of-call-report":
+    kind = msg.get("type")
+    if kind == "assistant-request":  # an inbound call is ringing: rate-limit before Vapi spends minutes
+        phone = (call.get("customer") or {}).get("number") or "unknown"
+        if not allow(f"calls:{phone}", CALLS_PER_NUMBER_PER_DAY, 86400):
+            return {"error": "This number has reached today's demo call limit. Please try again tomorrow."}
+        if not allow("calls:all", CALLS_PER_DAY, 86400):
+            return {"error": "Cue's demo line has reached today's call limit. Please try again tomorrow."}
+        return {"assistantId": ASSISTANT_ID}
+    if kind in ("status-update", "end-of-call-report"):
+        _vapi_live(msg, call)
+    if kind == "end-of-call-report":
         return await _vapi_threadpool(_vapi_queue_hangup, msg, call)
-    if msg.get("type") != "tool-calls":
-        return {"ok": True}  # ignore other Vapi events (status updates)
+    if kind != "tool-calls":
+        return {"ok": True}
     phone = (call.get("customer") or {}).get("number") or "unknown"
     results = []
     for tc in msg.get("toolCallList") or msg.get("toolCalls") or []:
@@ -515,10 +574,14 @@ async def vapi_tools(request: _VapiRequest):
                 extra = {k: args.get(k) for k in ("amount", "when", "tried", "wants", "best_time") if args.get(k)}
                 transcript = [{"speaker": "caller", "text": f"{k}: {v}"} for k, v in {**answers, **extra}.items() if v]
                 VAPI_TRIAGED.add(call.get("id"))
+                if call.get("id") in LIVE:
+                    LIVE[call["id"]].update(stage="scoring", name=args.get("caller_name") or LIVE[call["id"]].get("name"))
                 r = await _vapi_threadpool(triage_call, TriageIn(
                     phone=phone, caller_name=args.get("caller_name") or None,
                     answers=answers, transcript=transcript))
                 pos, eta = r["position"], r["eta_minutes"]
+                if call.get("id") in LIVE:
+                    LIVE[call["id"]].update(stage="queued", queuedAt=time.time() * 1000, tier=r["item"]["tier"], name=r["item"]["name"])
                 out = {"position": pos, "eta_minutes": eta, "tier": r["item"]["tier"],
                        "say": f"Tell the caller they are number {pos} in line and a specialist should call back in about {eta} minutes. Callbacks go by urgency, not by who called first."}
             else:
@@ -529,3 +592,76 @@ async def vapi_tools(request: _VapiRequest):
         results.append({"toolCallId": tc.get("id"), "result": json.dumps(out)})
     return {"results": results}
 # ===================== END VAPI PHONE CALLS =====================
+
+
+
+# ---------------- shared state + rate limits (for Vercel's many short-lived instances) ----------------
+from fastapi import Request as _Req
+from fastapi.responses import JSONResponse as _JSON
+from fastapi.concurrency import run_in_threadpool as _pool
+
+VAPI_TRIAGED_KEY = "cue:triaged"
+_MEM_RL = {}
+
+
+def allow(key, limit, window):
+    """Fixed-window counter: shared through Redis when configured, per instance otherwise."""
+    bucket = f"rl:{key}:{int(time.time() // window)}"
+    if REDIS_URL:
+        try:
+            n = redis("INCR", bucket)
+            if n == 1:
+                redis("EXPIRE", bucket, window)
+            return n <= limit
+        except Exception as e:
+            print("rate limit check failed, allowing:", e)
+            return True
+    _MEM_RL[bucket] = _MEM_RL.get(bucket, 0) + 1
+    return _MEM_RL[bucket] <= limit
+
+
+def _pull():
+    raw = redis("GET", "cue:state")
+    if not raw:
+        STATE["dirty"] = True  # first run: store the seeded queue
+        return
+    st = json.loads(raw)
+    QUEUE[:] = st.get("queue", [])
+    CALLERS.clear(); CALLERS.update(st.get("callers", {}))
+    SETTINGS.update(st.get("settings", {}))
+    LIVE.clear(); LIVE.update(st.get("live", {}))
+    VAPI_TRIAGED.update(st.get("triaged", []))
+
+
+def _push():
+    redis("SET", "cue:state", json.dumps({"queue": QUEUE, "callers": CALLERS, "settings": SETTINGS, "live": LIVE,
+                                          "triaged": list(VAPI_TRIAGED)[-200:]}))
+
+
+# per-visitor limits on the endpoints that spend AI credits or reset the demo
+WEB_LIMITS = {"/api/triage_call": (5, 3600), "/api/assistant": (20, 3600), "/api/translate": (30, 3600),
+              "/api/reset": (10, 3600), "/api/settings": (20, 3600)}
+
+
+@app.middleware("http")
+async def _sync_and_limit(request: _Req, call_next):
+    path = request.url.path
+    if request.method == "POST" and not path.startswith("/vapi"):
+        ip = (request.headers.get("x-forwarded-for") or (request.client.host if request.client else "?")).split(",")[0].strip()
+        for prefix, (limit, window) in WEB_LIMITS.items():
+            if path.startswith(prefix) and not await _pool(allow, f"web:{prefix}:{ip}", limit, window):
+                return _JSON({"detail": "Too many requests. Please wait a bit and try again."}, status_code=429)
+    shared = REDIS_URL and (path.startswith("/api") or path.startswith("/vapi"))
+    if shared:
+        try:
+            await _pool(_pull)
+        except Exception as e:
+            print("state pull failed:", e)
+    response = await call_next(request)
+    if shared and STATE["dirty"]:
+        STATE["dirty"] = False
+        try:
+            await _pool(_push)
+        except Exception as e:
+            print("state push failed:", e)
+    return response

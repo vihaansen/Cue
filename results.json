@@ -66,8 +66,8 @@
   "flagged_share": 0.2
  },
  "reached_in_first_20pct": {
-  "Rung (3 questions)": 0.3968187526161574,
-  "Rung (full model)": 0.39472582670573464,
+  "Cue (3 questions)": 0.3968187526161574,
+  "Cue (full model)": 0.39472582670573464,
   "First-come, first-served": 0.14776056927584763,
   "Random": 0.20594390958560066
  },

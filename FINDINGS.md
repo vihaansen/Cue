@@ -1,4 +1,6 @@
-# Rung × CFPB: findings (slide-ready)
+# Cue × CFPB: findings (slide-ready)
+
+> In earlier drafts this model was labelled "Rung". Rung is our friends' project, which we did not build; the model and results here are ours, so they are now labelled Cue.
 
 ## Data
 - **Source:** CFPB Consumer Complaint Database, bulk file released Nov 21 2026 (public domain, CC0).
@@ -19,7 +21,7 @@ Forward selection over 6 askable questions picked, in order:
 ## Ranking vs first-come-first-served (chart 2)
 | Order | Cases needing action reached in the first 20% of callbacks |
 |---|---|
-| Rung, 3 questions | **40%** |
+| Cue, 3 questions | **40%** |
 | Random | 21% |
 | First-come, first-served | 15% |
 
@@ -27,9 +29,9 @@ Forward selection over 6 askable questions picked, in order:
 - First-come does worse than random here (AUC 0.47) because older complaints in this window were slightly less likely to need action.
 
 ## Validation and limits (say these before a judge asks)
-- **The label measures company behavior.** Which company it is predicts relief best (AUC 0.82 on its own), because some companies hand out relief far more often than others. Rung answers one company's line, so we left that question out. For a multi-company hotline (a legal-aid line, a consumer advocate), it would be question #1.
+- **The label measures company behavior.** Which company it is predicts relief best (AUC 0.82 on its own), because some companies hand out relief far more often than others. Cue answers one company's line, so we left that question out. For a multi-company hotline (a legal-aid line, a consumer advocate), it would be question #1.
 - **Within one company the lift is modest:** median AUC **0.60** across the 17 largest companies with at least 10 cases each way, ranging from 0.41 to 0.74. The big gains come from sorting *types* of problems. Fine-grained ranking inside one company would need that company's own callback outcomes, and every handled call creates exactly that label.
-- **No narratives**, so tone, dollar amounts and deadlines aren't used. For a live Rung call they could be pulled from the transcript.
+- **No narratives**, so tone, dollar amounts and deadlines aren't used. For a live Cue call they could be pulled from the transcript.
 
 ## Fairness audit (chart 3)
 - **States:** the average score is within ±2 points of the actual rate for all 10 largest states.
@@ -53,9 +55,9 @@ Story: v1 dropped the dollar amount half the time because the format had no slot
 
 ## One-liners for slides
 - "3 questions get 99.5% of what all our data can tell us."
-- "In the first 20% of callbacks, Rung reaches 40% of the people who needed action. First-come reaches 15%."
-- "Our audit found the 3 questions under-rank older callers, so Rung keeps one extra flag."
-- "Limit: our label is whether the company granted relief, a stand-in for urgency. Inside one company the lift is modest (AUC 0.60), and that's why Rung learns from every call it handles."
+- "In the first 20% of callbacks, Cue reaches 40% of the people who needed action. First-come reaches 15%."
+- "Our audit found the 3 questions under-rank older callers, so Cue keeps one extra flag."
+- "Limit: our label is whether the company granted relief, a stand-in for urgency. Inside one company the lift is modest (AUC 0.60), and that's why Cue learns from every call it handles."
 
 ## Q&A prep
 - **"Isn't relief a weak stand-in for urgency?"** Yes, and here's how much it's driven by the company (0.82 from company alone). That's why we excluded company and report within-company AUC.
@@ -64,6 +66,6 @@ Story: v1 dropped the dollar amount half the time because the format had no slot
 
 ## Files
 - `charts/chart1_auc_vs_questions.png`, `charts/chart2_ranking_vs_fcfs.png`, `charts/chart3_fairness_older.png`
-- `results.json` (all numbers), `rung_scoring.json` (3-question weights for Rung's scorer)
+- `results.json` (all numbers), `rung_scoring.json` (3-question weights for Cue's scorer)
 - `fairness_by_group.csv`, `fairness_by_state.csv`, `fairness_by_channel.csv`, `within_company_auc.csv`
 - `prep.py`, `model.py`, `brief_check.py`

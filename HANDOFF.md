@@ -1,4 +1,6 @@
 # Voicemate: builder handoff (read top to bottom)
+
+> **Note:** Rung, mentioned throughout this file, is our friends' project. We did not build it. We used its public dashboard as a design and API reference, with credit.
 **Acalanes Data Fest 2026 · BRIDGEGOOD Oakland · Sat Nov 21 · Demos 3:30 PM, done by 3:25 PM**
 Written 12:25 PM. The person who wrote this is out of time. **This file is everything you need. You don't need the chat it came from.**
 
@@ -290,7 +292,7 @@ Taken directly from Rung's site CSS. Use it and Voicemate will look like a real 
 - **"How do you know the briefs are right?"** "We tested 50 real complaints: zero invented amounts, 98% with nothing invented. v1 dropped the amount half the time; we fixed it to 77%."
 - **"Is it fair?"** "States are within 2 points. Older callers were under-ranked by the 3 questions, so we keep an age flag."
 - **"Why not accuracy?"** "80% of complaints don't need action. 'Never urgent' would be 80% accurate and useless. We report AUC, precision and recall."
-- **"Is this a real phone line?"** "Not today. It's the engine, running through the laptop mic. In production it plugs into a phone provider. Rung, our earlier project, runs on Dial."
+- **"Is this a real phone line?"** "Not today. It's the engine, running through the laptop mic. In production it plugs into a phone provider, the way our friends' project Rung runs on Dial."
 
 ---
 
@@ -300,7 +302,7 @@ Taken directly from Rung's site CSS. Use it and Voicemate will look like a real 
 - **Callers:** synthetic, labeled as synthetic. No real personal data.
 - **Video:** record only teammates' voices (California requires every party's consent).
 - **Never claim:** verified callers, SMS codes, a real phone line, or that the score *is* urgency.
-- **Prior work:** Rung existed before today. Today's new work is the data analysis and Voicemate. Ask the organizers whether earlier projects are allowed if nobody has yet, and describe it honestly.
+- **Rung is not ours:** Rung was built by our friends. We did not build it. Voicemate (now Cue) borrows its dashboard layout and API field names with credit; our own work is the data analysis, the learned ranking, the briefs and the Cue app. Say this plainly if asked.
 
 ---
 

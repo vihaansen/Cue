@@ -160,14 +160,8 @@ export function SetupPage({ board, prefs, setPrefs, toast, refresh }) {
   const s = board?.settings || {};
   const [draft, setDraft] = useState({ company: s.company || "", repsOnShift: s.repsOnShift || 1, avgHandleMin: s.avgHandleMin || 3 });
   const [p, setP] = useState(prefs);
-  const [voices, setVoices] = useState([]);
   const [tab, setTab] = useState("company");
   useEffect(() => { if (board) setDraft({ company: s.company, repsOnShift: s.repsOnShift, avgHandleMin: s.avgHandleMin }); }, [!!board]); // eslint-disable-line
-  useEffect(() => {
-    if (!("speechSynthesis" in window)) return;
-    const load = () => setVoices(speechSynthesis.getVoices().filter((v) => v.lang.startsWith("en")));
-    load(); speechSynthesis.onvoiceschanged = load;
-  }, []);
   useEffect(() => { applyAccent(p.accent); return () => applyAccent(prefs.accent); }, [p.accent]); // eslint-disable-line live preview
   const dirty = JSON.stringify(p) !== JSON.stringify(prefs) || draft.company !== s.company || +draft.repsOnShift !== s.repsOnShift || +draft.avgHandleMin !== s.avgHandleMin;
   async function save() {
@@ -177,12 +171,6 @@ export function SetupPage({ board, prefs, setPrefs, toast, refresh }) {
     } catch (e) { toast({ text: e.message, tone: "error" }); }
   }
   function discard() { setP(prefs); setDraft({ company: s.company, repsOnShift: s.repsOnShift, avgHandleMin: s.avgHandleMin }); }
-  function testVoice() {
-    speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(`Thanks for calling ${draft.company}. This is Cue, an AI assistant. Who am I speaking with?`);
-    u.rate = p.rate; const v = speechSynthesis.getVoices().find((x) => x.voiceURI === p.voiceURI); if (v) u.voice = v;
-    speechSynthesis.speak(u);
-  }
   const go = (id) => { setTab(id); document.getElementById(`setup-${id}`)?.scrollIntoView({ behavior: "smooth", block: "start" }); };
   const script = useMemo(() => `You are Cue, the phone assistant for ${draft.company || "the company"}'s callback line. Callers reach you instead of a hold queue. Understand the problem once, write it up for a human specialist, and say when they'll get a call back. You cannot move money, change accounts, or look up balances.
 
@@ -215,7 +203,7 @@ RULES
         <div><h1>Setup</h1><p className="sentence">Callback line for {s.company || "…"} · ranking learned from 60,000 outcomes</p></div>
         <div className="head-right"><button type="button" className="ghost-btn" disabled={!dirty} onClick={discard}>Discard</button><button type="button" className="btn btn-primary" disabled={!dirty} onClick={save}>Save</button></div>
       </header>
-      <div className="tabs" role="tablist">{[["company", "Company"], ["voice", "Voice"], ["ranking", "Ranking"], ["dashboard", "Dashboard"]].map(([id, l]) => <button key={id} type="button" className={tab === id ? "is-on" : ""} onClick={() => go(id)}>{l}</button>)}</div>
+      <div className="tabs" role="tablist">{[["company", "Company"], ["voice", "Phone line"], ["ranking", "Ranking"], ["dashboard", "Dashboard"]].map(([id, l]) => <button key={id} type="button" className={tab === id ? "is-on" : ""} onClick={() => go(id)}>{l}</button>)}</div>
       <div className="setup">
         <div style={{ display: "grid", gap: "1rem" }}>
           <section className="card setup-card" id="setup-company"><span className="num">01</span><div>
@@ -224,17 +212,12 @@ RULES
           </div></section>
 
           <section className="card setup-card" id="setup-voice"><span className="num">02</span><div>
-            <h2>Voice</h2>
+            <h2>Phone line</h2>
             <div className="fields">
-              <div className="field"><label htmlFor="vc">Voice</label>
-                <select id="vc" value={p.voiceURI} onChange={(e) => setP({ ...p, voiceURI: e.target.value })}>
-                  <option value="">Browser default</option>
-                  {voices.map((v) => <option key={v.voiceURI} value={v.voiceURI}>{v.name} · {v.lang}</option>)}
-                </select></div>
-              <div className="field"><label htmlFor="rt">Speaking rate · {p.rate.toFixed(2)}×</label>
-                <input id="rt" type="range" min="0.8" max="1.4" step="0.05" value={p.rate} onChange={(e) => setP({ ...p, rate: +e.target.value })} style={{ padding: 0, background: "none" }} /></div>
-              <div className="field full"><span className="lbl">Greeting for new callers</span><input readOnly value={`Thanks for calling ${draft.company}. This is Cue, an AI assistant. Who am I speaking with?`} /></div>
-              <div className="field full"><button type="button" className="btn" onClick={testVoice} style={{ justifySelf: "start" }}><Volume2 size={15} />Play the greeting</button></div>
+              <div className="field"><span className="lbl">Number</span><input readOnly value={s.phoneNumber ? phoneFmt(s.phoneNumber) : "Not set"} /></div>
+              <div className="field"><span className="lbl">Voice</span><input readOnly value="Vapi · Elliot" /></div>
+              <div className="field full"><span className="lbl">Greeting</span><input readOnly value={`Thanks for calling ${draft.company}. I'm Cue, an AI assistant, and this call may be recorded. What's going on today?`} /></div>
+              <p className="muted small field full">Calls are limited to a few per caller per day and a daily total, and each call is capped at 3 minutes, so the free Vapi plan isn't used up.</p>
             </div>
           </div></section>
 

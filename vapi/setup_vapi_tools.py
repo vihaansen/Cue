@@ -20,6 +20,8 @@ if len(sys.argv) < 2 or not sys.argv[1].startswith("https://"):
     sys.exit("Usage: python setup_vapi_tools.py https://YOUR-TUNNEL-URL")
 URL = sys.argv[1].rstrip("/") + "/vapi/tools"
 KEY, AID, PID = os.environ["VAPI_API_KEY"], os.environ["ASSISTANT_ID"], os.environ.get("VAPI_PHONE_NUMBER_ID")
+SECRET = os.environ.get("VAPI_SERVER_SECRET")  # sent as X-Vapi-Secret so only Vapi can post to the server
+SERVER = {"url": URL, "timeoutSeconds": 20, **({"headers": {"x-vapi-secret": SECRET}} if SECRET else {})}
 COMPANY = os.environ.get("COMPANY_NAME", "Bank of Bridgegood")
 
 SYSTEM = f"""You are Cue, the AI assistant on {COMPANY}'s support line. Nobody waits on hold: you understand the problem once and place the caller in a callback line ranked by urgency. The whole call should take about one minute.
@@ -53,7 +55,7 @@ TOOLS = [
      "function": {"name": "lookup_caller",
                   "description": "Check whether the caller has called before (uses caller ID). Call once, silently, when the caller first speaks.",
                   "parameters": {"type": "object", "properties": {}}},
-     "server": {"url": URL, "timeoutSeconds": 10},
+     "server": {**SERVER, "timeoutSeconds": 10},
      "messages": [{"type": "request-start", "content": ""}]},
     {"type": "function",
      "function": {"name": "triage_call",
@@ -66,7 +68,7 @@ TOOLS = [
                       "amount": S("Dollar amount mentioned, copied exactly"),
                       "when": S("When it happened"), "tried": S("What they already tried"),
                       "wants": S("What they want done"), "best_time": S("Best time to call back")}}},
-     "server": {"url": URL, "timeoutSeconds": 45},
+     "server": {**SERVER, "timeoutSeconds": 45},
      "messages": [{"type": "request-start", "content": ""}]},
     {"type": "endCall"},
 ]
@@ -87,7 +89,8 @@ current = api("GET", f"/assistant/{AID}")[1]
 model = current.get("model", {}) if isinstance(current, dict) else {}
 model = {"provider": model.get("provider", "openai"), "model": model.get("model", "gpt-4o"),
          "messages": [{"role": "system", "content": SYSTEM}], "tools": TOOLS}
-patch = {"model": model, "server": {"url": URL, "timeoutSeconds": 20}, "serverMessages": ["tool-calls", "end-of-call-report"],
+patch = {"model": model, "server": SERVER, "serverMessages": ["tool-calls", "end-of-call-report", "status-update"],
+         "maxDurationSeconds": 180,  # free plan: cap every call at 3 minutes
          "firstMessage": f"Thanks for calling {COMPANY}. I'm Cue, an AI assistant, and this call may be recorded. What's going on today?",
          "firstMessageMode": "assistant-speaks-first"}
 code, res = api("PATCH", f"/assistant/{AID}", patch)
@@ -99,8 +102,9 @@ if code >= 300:
     code, res = api("PATCH", f"/assistant/{AID}", patch)
 print("✓ Assistant updated (prompt, 3 questions, 2 tools)" if code < 300 else f"✗ Assistant update failed ({code}): {res}")
 if PID:
-    code, res = api("PATCH", f"/phone-number/{PID}", {"assistantId": AID})
-    print("✓ Phone number answers with this assistant" if code < 300 else f"✗ Phone number update failed ({code}): {res}")
+    # no fixed assistant: Vapi asks the server first (assistant-request), so it can turn away calls over the daily limit
+    code, res = api("PATCH", f"/phone-number/{PID}", {"assistantId": None, "server": SERVER})
+    print("✓ Phone number asks the server before answering (rate-limited)" if code < 300 else f"✗ Phone number update failed ({code}): {res}")
     num = api("GET", f"/phone-number/{PID}")[1]
     if isinstance(num, dict) and num.get("number"):
         print(f"\n📞 Call {num['number']} to test.")

@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { ListOrdered, Users, BarChart3, SlidersHorizontal, ChevronLeft, X, ArrowUp, RotateCcw } from "lucide-react";
+import { Home as HomeIcon, ListOrdered, Users, BarChart3, SlidersHorizontal, ChevronLeft, X, ArrowUp, RotateCcw } from "lucide-react";
 import { api, usePoll, useNow, loadPrefs, savePrefs, applyAccent, initials } from "./lib";
 import QueuePage from "./Queue";
-import CallDrawer from "./CallDrawer";
+import HomePage from "./Home";
 import { CallersPage, InsightsPage, SetupPage } from "./Pages";
 
 export function Mark({ size = 18, ring = "#f4f1ea" }) {
@@ -16,7 +16,7 @@ export function Mark({ size = 18, ring = "#f4f1ea" }) {
   );
 }
 
-/* Toasts (Rung: 3.5 s, 6 s with an action, 7 s for errors) */
+/* Toasts (timings borrowed from Rung, our friends' project: 3.5 s, 6 s with an action, 7 s for errors) */
 function useToast() {
   const [t, setT] = useState(null), tm = useRef();
   const show = useCallback((x) => { clearTimeout(tm.current); setT({ ...x, id: Date.now() }); tm.current = setTimeout(() => setT(null), x.tone === "error" ? 7000 : x.action ? 6000 : 3500); }, []);
@@ -69,51 +69,48 @@ function Assistant({ onClose, org }) {
 }
 
 const ROUTES = [
+  ["home", "Home", HomeIcon],
   ["queue", "Queue", ListOrdered], ["callers", "Callers", Users], ["insights", "Insights", BarChart3], ["setup", "Setup", SlidersHorizontal],
 ];
 
 export default function App() {
-  const [route, setRoute] = useState(() => location.hash.slice(1) || "queue");
+  const [route, setRoute] = useState(() => location.hash.slice(1) || "home");
   const [collapsed, setCollapsed] = useState(false);
   const [prefs, setPrefsState] = useState(loadPrefs);
-  const [drawer, setDrawer] = useState(false), [assist, setAssist] = useState(false);
-  const [liveCall, setLiveCall] = useState(null), [holdId, setHoldId] = useState(null);
+  const [assist, setAssist] = useState(false);
+  const [holdId] = useState(null);
   const board = usePoll("/api/board", 1500);
   const now = useNow(1000);
   const { toast, show, hide } = useToast();
   const org = board.data?.settings?.company || "Bank of Bridgegood";
 
-  useEffect(() => { const h = () => setRoute(location.hash.slice(1) || "queue"); addEventListener("hashchange", h); return () => removeEventListener("hashchange", h); }, []);
+  useEffect(() => { const h = () => setRoute(location.hash.slice(1) || "home"); addEventListener("hashchange", h); return () => removeEventListener("hashchange", h); }, []);
   useEffect(() => { applyAccent(prefs.accent); }, [prefs.accent, route]);
   useEffect(() => { document.title = route === "queue" ? `Cue · ${board.data ? `${board.data.queued.length} waiting` : "Queue"}` : `Cue · ${route[0].toUpperCase()}${route.slice(1)}`; }, [route, board.data?.queued.length]);
   const setPrefs = (p) => { setPrefsState(p); savePrefs(p); };
   const go = (r) => { location.hash = r; setRoute(r); };
   const visibleRoutes = ROUTES.filter(([id]) => id !== "insights" || prefs.showInsights);
 
-  // The re-rank moment: the new row lands at the bottom, then glides to its rank.
-  const onQueued = useCallback(async (item) => {
-    if (route !== "queue") go("queue");
-    setHoldId(item.id);
-    await board.refresh();
-    setTimeout(() => setHoldId(null), 1000);
-  }, [route, board]); // eslint-disable-line
 
   async function resetDemo() {
     try { await api("/api/reset", {}); await board.refresh(); show({ text: "Demo reset: the four seed callers are back, and Maria is the only saved caller." }); }
     catch (e) { show({ text: e.message, tone: "error" }); }
   }
 
-  const page = route === "callers" ? <CallersPage board={board.data} toast={show} refresh={board.refresh} />
+  const lv = board.data?.live?.[0];
+  const liveCall = lv ? { ...lv, stage: lv.stage || "listening" } : null;
+  const page = route === "home" ? <HomePage board={board.data} now={now} org={org} prefs={prefs} toast={show} refresh={board.refresh} go={go} />
+    : route === "callers" ? <CallersPage board={board.data} toast={show} refresh={board.refresh} />
     : route === "insights" && prefs.showInsights ? <InsightsPage board={board.data} refresh={board.refresh} />
     : route === "setup" ? <SetupPage board={board.data} prefs={prefs} setPrefs={setPrefs} toast={show} refresh={board.refresh} />
-    : <QueuePage board={board.data} now={now} org={org} liveCall={liveCall} holdId={holdId} prefs={prefs} onStartCall={() => setDrawer(true)} toast={show} refresh={board.refresh} />;
+    : <QueuePage board={board.data} now={now} org={org} liveCall={liveCall} holdId={holdId} prefs={prefs} toast={show} refresh={board.refresh} />;
 
   return (
     <div className={`app${collapsed ? " is-collapsed" : ""}`}>
       <a href="#main" className="sr" onFocus={(e) => e.currentTarget.classList.remove("sr")} onBlur={(e) => e.currentTarget.classList.add("sr")}>Skip to content</a>
       <nav className="sidebar" aria-label="Main">
         <div className="sb-top">
-          <a className="logo" href="#queue" onClick={() => go("queue")}><span className="logo-mark"><Mark /></span><span className="logo-word">cue</span></a>
+          <a className="logo" href="#home" onClick={() => go("home")}><span className="logo-mark"><Mark /></span><span className="logo-word">cue</span></a>
           <button type="button" className="sb-collapse" aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"} onClick={() => setCollapsed((c) => !c)}><ChevronLeft size={15} /></button>
         </div>
         <div className="sb-nav">
@@ -131,7 +128,6 @@ export default function App() {
       </nav>
       <main className="main" id="main">{page}</main>
 
-      <CallDrawer open={drawer} onClose={() => setDrawer(false)} company={org} prefs={prefs} onLive={setLiveCall} onQueued={onQueued} />
       {prefs.showAssistant && (assist ? <Assistant org={org} onClose={() => setAssist(false)} /> : (
         <button type="button" className="fab" onClick={() => setAssist(true)}><span className="logo-mark" style={{ background: "#ffffff14" }}><Mark size={15} /></span>Ask Cue</button>
       ))}

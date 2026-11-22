@@ -266,7 +266,7 @@ function Brief({ item: e, now, scaleMax, busy, onCallBack, onDone, onRelease, on
 }
 
 /* ---------- today ---------- */
-function Today({ items, settings, onReopen }) {
+export function Today({ items, settings, onReopen }) {
   const [tier, setTier] = useState("all");
   const day0 = new Date(); day0.setHours(0, 0, 0, 0);
   const ev = [];
@@ -374,7 +374,7 @@ export default function QueuePage({ board, now, org, liveCall, holdId, prefs, on
     finally { setBusy(null); }
   }
 
-  // keyboard: ↑ ↓ to move, Enter to call back (Rung's shortcuts)
+  // keyboard: ↑ ↓ to move, Enter to call back (same shortcuts as Rung, our friends' project)
   useEffect(() => {
     const h = (ev) => {
       const t = ev.target;
@@ -415,7 +415,7 @@ export default function QueuePage({ board, now, org, liveCall, holdId, prefs, on
             <span className="seg"><Sparkles size={14} />Learned ranking</span>
             <span className="ready"><i className={`ready-dot${board ? "" : " off"}`} />{board ? "Ready for callback" : "Offline"}</span>
           </span>
-          <button type="button" className="btn btn-ink" onClick={onStartCall}><Phone size={15} />Start a test call</button>
+          {board?.settings?.phoneNumber && <a className="btn btn-ink" href={`tel:${board.settings.phoneNumber}`}><Phone size={15} />Call Cue · {phoneFmt(board.settings.phoneNumber)}</a>}
         </div>
       </header>
 

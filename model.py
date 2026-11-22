@@ -1,4 +1,4 @@
-"""Rung x CFPB: which 3 intake questions matter, and does ranking beat first-come?
+"""Cue x CFPB (earlier label: "Rung"; Rung is our friends' project, not ours): which 3 intake questions matter, and does ranking beat first-come?
 
 Target: needs_action = company closed with monetary/non-monetary relief, or
 responded late. This is a STAND-IN for urgency, not urgency itself.
@@ -47,7 +47,7 @@ LABEL = {
     "state": "What state are you in?",
 }
 
-# Rung serves ONE company's line, so "which company?" is constant there.
+# Cue serves ONE company's line, so "which company?" is constant there.
 # Keep company only for the within-company evaluation, not as a question.
 COMPANY = Q.pop("company")
 
@@ -115,8 +115,8 @@ def at_top(p, frac=0.2):
 dates = pd.to_datetime(df["Date received"].iloc[te]).values
 rng = np.random.default_rng(SEED)
 orders = {
-    "Rung (3 questions)": np.argsort(-p3, kind="stable"),
-    "Rung (full model)": np.argsort(-p_full, kind="stable"),
+    "Cue (3 questions)": np.argsort(-p3, kind="stable"),
+    "Cue (full model)": np.argsort(-p_full, kind="stable"),
     "First-come, first-served": np.argsort(dates, kind="stable"),
     "Random": rng.permutation(len(te)),
 }
@@ -153,7 +153,7 @@ fig.savefig("charts/chart1_auc_vs_questions.png", dpi=160)
 
 fig, ax = plt.subplots(figsize=(11, 6.2))
 x = np.arange(1, len(te) + 1) / len(te)
-style = {"Rung (3 questions)": ("#dc2626", "-", 3.5), "Rung (full model)": ("#16a34a", "--", 2),
+style = {"Cue (3 questions)": ("#dc2626", "-", 3.5), "Cue (full model)": ("#16a34a", "--", 2),
          "First-come, first-served": ("#6b7280", "-", 2.5), "Random": ("#9ca3af", ":", 2)}
 for n, g in gains.items():
     c, ls, lw = style[n]
@@ -210,7 +210,7 @@ ax.set_ylim(0, 0.3)
 fig.tight_layout()
 fig.savefig("charts/chart3_fairness_older.png", dpi=160)
 
-# ---- Export the 3-question scorer for Rung --------------------------------
+# ---- Export the 3-question scorer for Cue --------------------------------
 enc = m3.named_steps["columntransformer"].named_transformers_["oh"]
 lr = m3.named_steps["logisticregression"]
 weights = {}

@@ -29,3 +29,6 @@ vapi/assistant-backup.json
 .agents/
 .claude/
 skills-lock.json
+.vercel
+.env*
+.server.pre-vercel-calls.py
